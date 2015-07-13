@@ -153,9 +153,10 @@ body {
         font-size: 0.7em;
     }
 }
-
-@media screen and (max-width:900px) {
-    /*For Mobile Devices i.e. -- Screen < 700px*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+ { /* For Tablets*/
     #header {
         overflow: hidden;
         padding:0;
@@ -190,6 +191,18 @@ body {
     }
 
     html {
-        font-size: 0.7em;
+        font-size: 1em;
     }
-}
+ 
+ 
+ }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { /* for Tablets in landscape */}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { /* STYLES GO HERE */ }

@@ -153,3 +153,43 @@ body {
         font-size: 0.7em;
     }
 }
+
+@media screen and (max-width:900px) {
+    /*For Mobile Devices i.e. -- Screen < 700px*/
+    #header {
+        overflow: hidden;
+        padding:0;
+    }
+
+        #header li:not(:first-child) {
+            display: none;
+        }
+
+        #header li:first-child {
+            float: right;
+            margin-right: 10%;
+        }
+
+    .box {
+        width: 90%;
+        border: 1px solid red;
+    }
+
+        .box img {
+            display: none;
+        }
+
+        .box:hover {
+            width: 95%;
+        }
+
+    .box2:hover {
+        background-color: red;
+        color: yellow;
+        width: 95%;
+    }
+
+    html {
+        font-size: 0.7em;
+    }
+}

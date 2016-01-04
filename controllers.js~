@@ -28,7 +28,7 @@ angular.module('imdbApp',[])
 
   $http({
     method:'GET',
-    url:'list2.json' /*'http://www.myapifilms.com/imdb/inTheaters'*/
+    url:/*'list2.json'*/  /*'http://www.myapifilms.com/imdb/inTheaters'*/https://onedrive.live.com/redir?resid=F558F229D48C3283!12992&authkey=!AJy_lCppGLubzOE&ithint=file%2cjson
   }).success(function(data){
     $scope.list = data;
   }).error(function (error){

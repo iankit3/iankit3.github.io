@@ -18,13 +18,13 @@
 <body ng-controller="ListCtrl">
 
     <div style="margin-left:25%;">
-     <input type="text" ng-model="query"/>
+     <input type="text" placeholder="Search for Directors" ng-model="query.directors.name"/>
       <span  class="btn btn-info">Search</span>
     </div>
-       <div ng-repeat='d in list | filter:inTheaters | orderBy:"cus_orde"' class="row row1">
+       <div ng-repeat='d in list | filter:inTheaters' class="row row1">
                <h2>{{d.date}}</h2>
         <ul class="col-md-12" style="">
-            <li class="col-md-12 li" ng-repeat="movie in d.movies | filter:{movie:query}" style="list-style-type: none;">
+            <li class="col-md-12 li" ng-repeat='movie in d.movies | filter:query | orderBy:"rating"' style="list-style-type: none;">
                   <div class="col-md-8"> 
                    <h3> {{movie.title}} </h3>
                    <p>{{movie.plot}}</p>
@@ -41,3 +41,4 @@
     </div>
       </body>
 </html>
+

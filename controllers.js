@@ -20,6 +20,7 @@ angular.module('imdbApp',[])
 }])
 
 /************************* None Angular code ***************************************/
+/****************************And of no Use****************************************/
 var xmlhttp = new XMLHttpRequest();
 var url = "list2.json";
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Angular HackerNews</title>
+  <link rel="stylesheet" href="css/style.css"></link>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="js/script.js"></script>
+ </head>
+ 
+ <body ng-app="myApp">
+  <div class="full" ng-controller="newsController">
+    <div class="each" ng-repeat="i in myData">
+       <div class="head">
+          <div class="each-head">By:{{i.by}}</div>
+          <div class="each-head">Type:{{i.type}}</div>
+          <div class="each-head">Score:{{i.score}}</div>
+          <div class="each-head">{{i.time}}</div>
+       </div>
+       <div class="body">     
+          <div>{{i.title}}</div>
+          <div><a href="{{i.url}}">{{i.url}}</a></div>
+       </div>
+    </div> 
+  </div>
+ </body>	
+</html>

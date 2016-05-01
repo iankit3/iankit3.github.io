@@ -1,0 +1,40 @@
+body{
+   background:ghostwhite;
+}
+.full{
+    display:inline-block;
+    width:60%;
+    margin-left:5%;
+}
+
+.each{
+   height:100px;
+   border:1px solid grey;
+   margin-bottom:5px;
+}
+
+.head{
+    background: #eee;
+    height: 27px;
+    padding-left: 10px;
+    line-height: 27px;
+    margin-bottom: 4px;
+}
+.each-head{
+    width:20%;
+    background:lightgrey;
+    padding-left:5px;
+    padding-right:5px;
+    display:inline-block; 
+}
+.body{
+   background:smokewhite;
+   height:73px;
+   padding-left:10px;
+}
+.side{
+  background:black;
+  color:white;
+  width:25%;
+  min-height:200px;
+}

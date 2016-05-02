@@ -10,6 +10,7 @@ angular.module("myApp",[])
      method:'GET',
      url:'http://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
   }).success(function(data){
+    $scope.Y_CROS = true;
     console.log(data);
     data = data.splice(0,10);
     console.log(data);

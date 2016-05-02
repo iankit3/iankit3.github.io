@@ -7,14 +7,14 @@
   <script src="js/script.js"></script>
  </head>
  
- <body ng-app="myApp">
+ <body ng-app="myApp" ng-controller="newsController">
    <h3 ng-hide="Y_CROS">Check if your browser is disabling CROS
       <a href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi">
         Plugin for chrome to enable CROS
       </a>
    </h3>
 
-  <div class="full" ng-controller="newsController">
+  <div class="full">
     <div class="each" ng-repeat="i in myData">
        <div class="head">
           <div class="each-head">By:{{i.by}}</div>

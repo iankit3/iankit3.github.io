@@ -15,12 +15,12 @@
    </h3>
 
   <div class="full">
-    <div class="each" ng-repeat="i in myData">
+    <div class="each" ng-repeat="i in myData | orderBy="sortBy">
        <div class="head">
-          <div class="each-head">By:{{i.by}}</div>
-          <div class="each-head">Type:{{i.type}}</div>
-          <div class="each-head">Score:{{i.score}}</div>
-          <div class="each-head">{{i.time}}</div>
+          <div class="each-head" ng-click="sortBy='by'">By:{{i.by}}</div>
+          <div class="each-head" ng-click="sortBy='type'">Type:{{i.type}}</div>
+          <div class="each-head" ng-click="sortBy='score'">Score:{{i.score}}</div>
+          <div class="each-head" ng-click="sortBy='time'">{{i.time}}</div>
        </div>
        <div class="body">     
           <div>{{i.title}}</div>

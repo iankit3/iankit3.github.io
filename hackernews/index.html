@@ -29,7 +29,8 @@
        <div class="head">
           <div class="each-head" >By:{{i.by}}</div>
           <div class="each-head">Type:{{i.type}}</div>
-          <div class="each-head">Score:{{i.score}}</div>
+          <div class="each-head">Score:{{i.score | date:'yyyy-MM-dd HH:mm:ss Z'
+}}</div>
           <div class="each-head">{{i.time}}</div>
        </div>
        <div class="body">     

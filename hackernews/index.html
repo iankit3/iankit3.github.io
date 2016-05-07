@@ -15,11 +15,16 @@
    </h3>
 
   <div class="full">
-    
+         <div class="sortBar">
+          <div class="polarity" ng-init="plus=true">
+             <span ng-click="plus=false" ng-show="plus">Incre++</span>
+             <span ng-hide="plus" ng-click="plus=true">Decr--</span>
+          </div>
           <div class="each-head" ng-click="sortBy='by'" >Author</div>
           <div class="each-head" ng-click="sortBy='type'">Type</div>
           <div class="each-head" ng-click="sortBy='score'">Score</div>
           <div class="each-head" ng-click="sortBy='time'">Time</div>
+        </div>
     <div class="each" ng-repeat="i in myData | orderBy:sortBy">
        <div class="head">
           <div class="each-head" >By:{{i.by}}</div>

@@ -3,14 +3,13 @@ angular.module("myApp",[])
  
 
  .controller("newsController",['$scope','$http', function($scope,$http){
- 
+// $scope.plus?$scope.reverse = false:$scope.reverse = true; 
  $scope.myData = [];   
 
   $http({
      method:'GET',
      url:'http://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
   }).success(function(data){
-    $scope.Y_CROS = true;
     console.log(data);
     data = data.splice(0,10);
     console.log(data);

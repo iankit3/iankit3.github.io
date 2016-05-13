@@ -1,20 +1,15 @@
-angular.module("myApp",[])
+var app = angular.module("myApp",[])
 
-.config(['$httpProvider', function ($httpProvider) {
-        $httpProvider.defaults.useXDomain = true;
-        delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    }]);
-.all('/*', function (request, response, next) {
-        response.header("Access-Control-Allow-Origin", "*");
-        response.header("Access-Control-Allow-Headers", "X-Requested-With");
-        response.header("Access-Control-Allow-Methods", "GET, POST", "PUT", "DELETE");
-        next();
-    });
-       
-
- .controller("newsController",['$scope','$http', function($scope,$http){
+app.config(function($httpProvider) {
+      //Enable cross domain calls
+      $httpProvider.defaults.useXDomain = true;
  
-$scope.myData = [];   
+      //Remove the header used to identify ajax call  that would prevent CORS from working
+      delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  });
+app.controller("newsController",['$scope','$http', function($scope,$http){
+ 
+ $scope.myData = [];   
 
   $http({
      method:'GET',

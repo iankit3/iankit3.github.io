@@ -3,7 +3,7 @@ angular.module("myApp",[])
  
 
  .controller("newsController",['$scope','$http', function($scope,$http){
-// $scope.plus?$scope.reverse = false:$scope.reverse = true; 
+ $http.default.useXDomain = true;
  $scope.myData = [];   
 
   $http({

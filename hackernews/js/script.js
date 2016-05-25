@@ -30,7 +30,8 @@ var S = 0,E = 10 ;
  })   
           $scope.text = "Lehsoon";
           console.log($scope.myData);
-       }])
+
 S = E;
 E += 10;
 }
+       }])

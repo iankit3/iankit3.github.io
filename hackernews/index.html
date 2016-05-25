@@ -3,7 +3,7 @@
  <head>
   <title>HackerNews</title>
   <link rel="stylesheet" href="css/style.css"></link>
-  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="js/script.js"></script>
  </head>
  
@@ -20,10 +20,10 @@
              <span ng-click="plus=false" ng-show="plus">Incre++</span>
              <span ng-hide="plus" ng-click="plus=true">Decr--</span>
           </div>
-          <div class="each-head" ng-click="sortBy='by'" >Author</div>
-          <div class="each-head" ng-click="sortBy='type'">Type</div>
-          <div class="each-head" ng-click="sortBy='score'">Score</div>
-          <div class="each-head" ng-click="sortBy='time'">Time</div>
+          <div class="each-head top-head" style="margin-left:11px"  ng-click="sortBy='by'" >Author</div>
+          <div class="each-head top-head" ng-click="sortBy='type'">Type</div>
+          <div class="each-head top-head" ng-click="sortBy='score'">Score</div>
+          <div class="each-head top-head" ng-click="sortBy='time'">Time</div>
         </div>
     <div class="each" ng-repeat="i in myData | orderBy:sortBy">
        <div class="head">
@@ -33,19 +33,10 @@
           <div class="each-head">{{i.time}}</div>
        </div>
        <div class="body">     
-          <div>{{i.title}}</div>
+          <div style="height:28px">{{i.title}}</div>
           <div><a href="{{i.url}}">{{i.url}}</a></div>
        </div>
     </div> 
   </div>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-39023930-2', 'auto');
-       ga('send', 'pageview');
- </script>
  </body>	
 </html>

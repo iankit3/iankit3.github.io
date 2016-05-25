@@ -14,7 +14,7 @@
       </a>
    </h3>
 
-  <div class="full">
+  <div class="full" ng-init="getMore()>
          <div class="sortBar">
           <div class="polarity" ng-init="plus=true">
              <span ng-click="plus=false" ng-show="plus">Incre++</span>
@@ -38,5 +38,6 @@
        </div>
     </div> 
   </div>
+  <button style="position:absolute;right:0;top:800px;" ng-click="getMore()">getMore</button>
  </body>	
 </html>

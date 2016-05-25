@@ -9,13 +9,15 @@ app.config(function($httpProvider) {
 app.controller("newsController",['$scope','$http', function($scope,$http){
  
  $scope.myData = [];   
+$scope.getMore = function(){
+var S = 0,E = 10 ;
 
   $http({
      method:'GET',
      url:'http://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
   }).success(function(data){
     console.log(data);
-    data = data.splice(0,10);
+    data = data.splice(S,E);
     console.log(data);
     data.forEach(function(e,i){
           $http({
@@ -29,3 +31,6 @@ app.controller("newsController",['$scope','$http', function($scope,$http){
           $scope.text = "Lehsoon";
           console.log($scope.myData);
        }])
+S = E;
+E += 10;
+}

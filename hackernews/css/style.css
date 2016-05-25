@@ -22,7 +22,7 @@ body{
 }
 
 .top-head{
-     margin-left: 11px;
+     width: 205px !important;
      height: 30px;
      background: salmon;
      font-size: 20px;

@@ -13,7 +13,7 @@ app.controller("newsController", ['$scope', '$http', function($scope, $http) {
     $scope.getMore = function() {
         $http({
             method: 'GET',
-            url: 'http://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
+            url: 'http://hacker-news.firebaseio.com/v0/topstories.json'
         }).success(function(data) {
             console.log(data);
             data = data.slice(S,E);
@@ -21,7 +21,7 @@ app.controller("newsController", ['$scope', '$http', function($scope, $http) {
             data.forEach(function(e, i) {
                 $http({
                     method: 'GET',
-                    url: 'https://hacker-news.firebaseio.com/v0/item/' + e + '.json?print=pretty'
+                    url: 'https://hacker-news.firebaseio.com/v0/item/' + e + '.json'
                 }).success(function(d) {
                     ($scope.myData).push(d);
                 })

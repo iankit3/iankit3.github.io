@@ -9,7 +9,7 @@ app.config(function($httpProvider) {
 
 function epocToDate(epoc){
  var myDate = new Date(epoc*1000);
- var dateF = (myDate.toLocaleString()).slice(0,4).replace('/','-') 
+ var dateF = (myDate.toLocaleString()).slice(0,4).replace('/','`th -') 
              + (myDate.toLocaleString()).slice(10,15) 
              +" "+ (myDate.toLocaleString()).slice(19,22) 
      myDate =  myDate.toLocaleString();

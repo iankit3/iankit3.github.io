@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="http://knppartners.com/wp-content/themes/knppartners/images/knplogo.jpg">
+	<title>k&pPartners</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+ 	<nav class="navbar navbar-default navbar-fixed-top">
+ 	  <div class="container-fluid">
+ 	    <div class="navbar-header">
+ 	      <a class="navbar-brand" href="#">
+ 	        <img alt="Brand" src="http://knppartners.com/wp-content/themes/knppartners/images/knplogo.jpg" style="position: absolute;top:0;width:70px;height: 50px">
+ 	      </a>
+ 	    </div>
+	 	    <ul class="nav navbar-nav">
+	 	        <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+	 	        <li><a href="about_us.html">About Us</a></li>
+	 	        <li><a href="knowledge.html">Knowledge Zone</a></li>
+	 	        <li><a href="team.html">Our Team </a></li>
+	 	        <li class="active"><a href="services.html">Our Services</a></li>
+	 	        <li><a href="contact.html">Contact Us</a></li>
+	 	     </ul>      
+ 	  </div>
+ 	</nav>
+  <div class="col-md-12 shadow-body" style="margin-top:60px;margin-bottom: 60px;">
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="..." alt="...">
+         </a>
+       </div>
+       ...
+     </div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="..." alt="...">
+         </a>
+       </div>
+       ...
+     </div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="..." alt="...">
+         </a>
+       </div>
+       ...
+     </div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="..." alt="...">
+         </a>
+       </div>
+       ...
+     </div>
+  </div>
+
+ 	<footer style="height:50px;background: #eee;position: fixed;bottom: 0;width: 100%">
+ 	  <div class="container">
+ 	    <div style="float: left;"><h1 style="margin-top:5px">Contact : 011-41077755</h1></div>
+ 	    <div style="float: right;padding-top: 15px;"> &copy <span id="d"></span> <a link="www.knppartners.com">KnP Partners</a> All Rights Reserved</div> 
+ 	  </div>
+ 	</footer>
+
+
+<script>
+
+   $(document).ready(function(){
+	   	var d = new Date();
+	   	document.getElementById("d").innerHTML = d.getFullYear();
+   	})
+	
+</script>
+</body>
+</html>

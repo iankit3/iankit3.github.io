@@ -1,0 +1,75 @@
+body {
+    background: #EFEFBB;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #EFEFBB, #D4D3DD);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EFEFBB, #D4D3DD);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.full {
+    display: inline-block;
+    width: 100%;
+    /* margin-left:5%;*/
+}
+
+.each {
+    /* height:100px;*/
+    border: 2px solid #eceff1;
+    margin-top: 20px;
+}
+
+.head {
+    background: #fff3e0;
+    /*height: 27px;*/
+    padding-left: 10px;
+    line-height: 27px;
+    /*margin-bottom: 4px;*/
+}
+
+.top-head {
+    /* width: 205px !important;*/
+    height: 30px;
+    background: #ab47bc;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.each-head {
+    width: 23%;
+    padding-left: 5px;
+    text-align: center;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.body {
+    background: white;
+    /*height:73px;*/
+}
+
+.body div {
+    padding: 5px 2px 5px 10px;
+}
+
+.side {
+    background: black;
+    color: white;
+    width: 25%;
+    min-height: 200px;
+}
+
+.btn {
+    padding: 2px 20px;
+}
+
+.btn-full {
+    position: relative;
+    right: 0;
+    top: 40px;
+    width: 100%;
+    background: #03A9F4;
+    border-radius: 6px;
+}

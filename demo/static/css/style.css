@@ -24,9 +24,20 @@
     padding-left: 10px;
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .navbar-nav>li>a {  
     color: #fff;
     font-size: 1em;
+}
+.navbar-inverse .navbar-nav>li.active>a{
+    color: #000;
+    font-size: 1.2em;
+    background-color: rgb(121, 195, 74);
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #000;
+    font-size: 1.2em;
+    background-color: rgb(121, 195, 74);
 }
 .navbar-inverse .navbar-brand {
     color: #fff;
@@ -45,6 +56,7 @@
 }
 span.glyphicon{
     margin-right:0.5em; 
+    font-size: 0.8em;
 }
 
 .carousel-control {
@@ -135,7 +147,7 @@ body {
 .navbar-wrapper .navbar {
 /*     padding-right: 15px;
 padding-left: 15px; */
-    background-color: rgba(34, 34, 34, 0.86);
+    background-color:rgba(139, 195, 74, 0.82);
 }
 .navbar-wrapper .navbar .container {
     width: auto;

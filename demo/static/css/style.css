@@ -22,6 +22,7 @@
 
 .navbar.navbar-inverse.navbar-static-top{
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 .navbar-inverse .navbar-nav>li>a {  
@@ -70,6 +71,10 @@ span.glyphicon{
 
 body{
     overflow-x: hidden;
+}
+
+body .navbar-wrapper .container {
+   padding: 0;
 }
 
 .container.marketing .row{

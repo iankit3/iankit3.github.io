@@ -183,12 +183,7 @@ body {
 .navbar-wrapper .navbar {
 /*     padding-right: 15px;
 padding-left: 15px; */
-<<<<<<< HEAD
-    /* background-color: rgba(34, 34, 34, 0.86); */
    background: rgba(255,255,255,0.95);;
-=======
-    background-color:rgba(139, 195, 74, 0.82);
->>>>>>> e8347afe4bb1b20883ac39a49a3782219c3a67cc
 }
 .navbar-wrapper .navbar .container {
     width: auto;

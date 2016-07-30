@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-
+    <title>Medinex Healthcare</title>
+     
+     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -56,7 +58,7 @@
                                        <li><a href="#">Med1 Tyep2</a></li>
                                    </ul>
                                </li>
-                               <li><a style="color:black;font-size:1.3em;" href="#">Call Us <code>+91-9595959595</code></a></li>
+                               <li><a style="color:black;font-size:1.3em;" href="#">Call Us <code>+91-9934859960</code></a></li>
                            </ul>
                        </div>
                    </div>
@@ -150,13 +152,81 @@
            <hr class="featurette-divider">
 
            <div class="row featurette" id="contact">
-               <div class="col-md-7">
-                   <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-                   <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-               </div>
-               <div class="col-md-5">
-                   <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="" data-holder-rendered="true">
-               </div>
+              
+            <div class="col-sm-12 col-lg-12 contact_header">
+                <h1 class="h1">Contact us <small>Feel free to contact us</small></h1>
+            </div>
+
+
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form id="form_contact">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Name</label>
+                                 <div class="input-group">
+                                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
+                                </span>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">
+                                Subject</label>
+                            <select id="subject" name="subject" class="form-control" required="required">
+                                <option value="na" selected="">Choose One:</option>
+                                <option value="service">General Customer Service</option>
+                                <option value="suggestions">Suggestions</option>
+                                <option value="product">Product Support</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Message</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                            Send Message</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <form>
+            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+            <address>
+                <strong>Medinex Healthcare Pvt. Ltd.</strong><br>
+                10181-82, Ground Floor,<br>
+                Shop Main Gurudwara Road, Near Bikaner Wala Naiwala,<br>
+                Karolbagh, Delhi-110005<br>
+                <abbr title="Phone">
+                    P:</abbr>
+                9934859960
+            </address>
+            <address>
+                <strong>Medinex Healthcare</strong><br>
+                <a href="mailto:#">medinexhealthcare@gmail.com</a>
+            </address>
+            </form>
+        </div>
+
            </div>
 
            <hr class="featurette-divider">

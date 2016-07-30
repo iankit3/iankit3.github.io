@@ -17,7 +17,6 @@
 
 .navbar-inverse .navbar-nav>li>a:hover {
     color: #000;
-    background-color: transparent;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: #000;
@@ -67,10 +66,6 @@
     background: white;
     font-size: 1.2em;
 }
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-    color: #000;
-    font-size: 1.2em;
-}
 .navbar-inverse .navbar-brand {
     color: #fff;
     font-size: 26px;
@@ -108,13 +103,22 @@ body .navbar-wrapper .container {
    padding: 0;
 }
 
-.container.marketing .row{
+.container.marketing > .row{
     height: 100vh;
     padding-top: 80px;  
-    padding-left:5vw ;
-    padding-right:5vw ;
+    padding-left:1vw ;
+    padding-right:1vw ;
+}
+#form_contact > .row{
+  padding: 20px 10px;
 }
 
+/* #contact{
+    padding-top: 20px;  
+} */
+.contact_header{
+    margin-bottom: 25px;
+}
 #about{
    /*  background-repeat: no-repeat;
    background: url('../img/1.jpg');

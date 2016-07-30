@@ -49,11 +49,28 @@
 
 .navbar.navbar-inverse.navbar-static-top{
     padding-left: 10px;
+    padding-right: 10px;
 }
 
+<<<<<<< HEAD
 .navbar-inverse .navbar-nav>li>a {
     /* color: #fff; */
+=======
+.navbar-inverse .navbar-nav>li>a {  
+    color: #fff;
+>>>>>>> e8347afe4bb1b20883ac39a49a3782219c3a67cc
     font-size: 1em;
+}
+.navbar-inverse .navbar-nav>li.active>a{
+    color: #000;
+    font-size: 1.2em;
+    background-color: rgb(121, 195, 74);
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #000;
+    font-size: 1.2em;
+    background-color: rgb(121, 195, 74);
 }
 .navbar-inverse .navbar-brand {
     color: #fff;
@@ -72,6 +89,7 @@
 }
 span.glyphicon{
     margin-right:0.5em; 
+    font-size: 0.8em;
 }
 
 .carousel-control {
@@ -85,6 +103,10 @@ span.glyphicon{
 
 body{
     overflow-x: hidden;
+}
+
+body .navbar-wrapper .container {
+   padding: 0;
 }
 
 .container.marketing .row{
@@ -118,17 +140,16 @@ footer{
 .marketing .col-lg-4 {
     margin-bottom: 20px;
     text-align: center;
-    width: 33.33%;
     float: left;
 }
-@media (min-width: 1200px)
+@media (min-width: 1200px){
     .col-lg-4 {
         width: 33.33333333%;
     }
-    @media (min-width: 1200px)
-        .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
-            float: left;
-        }
+    #about div{
+       width: 33.33%;
+    }
+}
 
 /**************************************/
 
@@ -162,8 +183,12 @@ body {
 .navbar-wrapper .navbar {
 /*     padding-right: 15px;
 padding-left: 15px; */
+<<<<<<< HEAD
     /* background-color: rgba(34, 34, 34, 0.86); */
    background: rgba(255,255,255,0.95);;
+=======
+    background-color:rgba(139, 195, 74, 0.82);
+>>>>>>> e8347afe4bb1b20883ac39a49a3782219c3a67cc
 }
 .navbar-wrapper .navbar .container {
     width: auto;
@@ -204,6 +229,10 @@ padding-left: 15px; */
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
+     #about div{
+        width: 100%;
+     }
+
     /* Navbar positioning foo */
     .navbar-wrapper {
         margin-top: 0;
@@ -219,7 +248,7 @@ padding-left: 15px; */
 
     /* The navbar becomes detached from the top, so we round the corners */
     .navbar-wrapper .navbar {
-        border-radius: 4px;
+        border-radius: 2px;
     }
 
     /* Bump up size of carousel content */
@@ -237,6 +266,9 @@ padding-left: 15px; */
 @media (min-width: 992px) {
     .featurette-heading {
         margin-top: 120px;
+    }
+     #about div{
+       width: 33.33%;
     }
 }
 

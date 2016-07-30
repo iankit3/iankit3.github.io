@@ -52,13 +52,9 @@
     padding-right: 10px;
 }
 
-<<<<<<< HEAD
+
 .navbar-inverse .navbar-nav>li>a {
     /* color: #fff; */
-=======
-.navbar-inverse .navbar-nav>li>a {  
-    color: #fff;
->>>>>>> e8347afe4bb1b20883ac39a49a3782219c3a67cc
     font-size: 1em;
 }
 .navbar-inverse .navbar-nav>li.active>a{

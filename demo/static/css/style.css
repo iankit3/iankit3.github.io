@@ -1,3 +1,30 @@
+/*More custom styles*/
+
+ .logo{
+    width: 68px; 
+    background: white;
+    position: absolute;
+    top:0;
+    padding: 3px;
+ }
+
+.logo_withText{
+    height: 52px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #000;
+    background-color: transparent;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+/**/
+
+
 .carousel-inner {
     position: relative;
     width: 100%;
@@ -25,7 +52,7 @@
 }
 
 .navbar-inverse .navbar-nav>li>a {
-    color: #fff;
+    /* color: #fff; */
     font-size: 1em;
 }
 .navbar-inverse .navbar-brand {
@@ -135,7 +162,8 @@ body {
 .navbar-wrapper .navbar {
 /*     padding-right: 15px;
 padding-left: 15px; */
-    background-color: rgba(34, 34, 34, 0.86);
+    /* background-color: rgba(34, 34, 34, 0.86); */
+   background: rgba(255,255,255,0.95);;
 }
 .navbar-wrapper .navbar .container {
     width: auto;

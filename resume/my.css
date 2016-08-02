@@ -1,0 +1,159 @@
+@font-face {
+    font-family: roboto;
+    src: url(./fonts/Roboto-Light.ttf);
+    /* EOT file for IE */
+    font-family: robotoM;
+    src: url(../fonts/Roboto-Medium.ttf);
+    /* EOT file for IE */
+}
+
+body {
+    font-size: 14px;
+    font-family: roboto;
+}
+
+.a {
+    border: 2px solid red;
+}
+
+.full {
+    background: whitesmoke;
+    width: 99%;
+    height: 1200px;
+    margin: 5px;
+}
+
+.header {
+    width: 70%;
+    height: 130px;
+    margin-left: 30%;
+    background: rgba(128, 128, 128, 0.09);
+}
+
+.sidebar {
+    width: 27%;
+    background: rgba(139, 195, 74, 0.35);
+    position: absolute;
+    top: 14px;
+    left: 3%;
+    float: left;
+    border: 2px solid green;
+}
+
+.rest {
+    width: 70%;
+    position: absolute;
+    margin-top: 30px;
+    left: 32%;
+    /* float: right; */
+    height: 500px;
+}
+
+.header-right {
+    padding-left: 5%;
+}
+
+.header-right > h1 {
+    font-family: roboto;
+    font-size: 5em;
+}
+
+.header-right > p {
+    font-family: robotoM;
+    font-size: 1.8em;
+    margin-top: -40px;
+}
+
+.sidebar img {
+    width: 100%;
+}
+
+.h3 {
+    width: 90%;
+}
+
+.h3 span {
+    font-family: robotoM;
+    font-size: 16px;
+}
+
+.side-head {
+    padding: 10px;
+}
+
+.h3 > div {
+    font-size: 16px;
+    display: inline-block;
+}
+
+.exp {
+    border-bottom: 2px solid white;
+    background: lightgrey;
+    padding: 3px;
+}
+
+.exp > div {
+    padding: 2px 0 2px 10px;
+}
+
+.score {
+    position: absolute;
+    right: 10px;
+    padding-right: 1em;
+    line-height: 25px;
+    display: inline-block;
+}
+
+.leftwala {
+    width: 15%;
+    display: inline-block;
+    color: blue;
+    font-family: monospace;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    vertical-align: top;
+}
+
+.rightwala {
+   /* position: absolute;*/
+    width: 80%;
+    margin-left: 2%;
+    display: inline-block;
+    font-size: 1.8em;
+    font-family: robotoM;
+}
+
+.nwala {
+    margin-left: 12%;
+    width: 70%;
+    padding: 2px 0 0 0px;
+    font-size: 1rem;
+}
+/*.nwala > ul{
+  line-height: 2px;
+}
+.nwala > ul > li{
+  line-height: 1.8px;
+}
+*/
+ul li{
+    font-size: 1rem;
+}
+.img {
+    width: 58%;
+    padding-left: 5em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+@media print {
+    body {
+        font-size: 12px;
+    }
+    .img {
+        padding-left: 20px;
+        width: 80% !important;
+        height: 100px !important;
+    }
+}

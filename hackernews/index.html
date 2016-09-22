@@ -8,13 +8,13 @@
     <script src="js/script.js"></script>
 </head>
 
-<body ng-app="myApp" ng-controller="newsController">
+<body ng-app="myApp" ng-controller="newsController as news">
     <h3 ng-hide="Y_CROS">Check if your browser is disabling CORS
       <a href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi">
         Plugin for chrome to enable CORS
       </a>
    </h3>
-    <div class="full" ng-init="getMore()">
+    <div class="full" ng-init="news.getMore()">
 <!--          <div class=" sortBar ">
           <div class="polarity " ng-init="plus=true ">
              <span ng-click="plus=false " ng-show="plus ">Incre++</span>
@@ -33,12 +33,12 @@
           <div class="each-head ">{{i.time}}</div>
        </div>
        <div class="body ">     
-          <div ng-click="showUrl($index,i)" >{{i.title}}</div>
+          <div ng-click="news.showUrl($index,i)" >{{i.title}}</div>
           
           <div ng-show="i.show"><a href="{{i.url}} " target="_blank">{{i.url}}</a></div>
        </div>
     </div> 
   </div>
-  <button class="btn btn-full" ng-click="getMore() ">getMore</button>
+  <button class="btn btn-full" ng-click="news.getMore() ">getMore</button>
  </body>  
 </html>

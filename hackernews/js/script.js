@@ -17,14 +17,14 @@ function epocToDate(epoc){
 }
 app.controller("newsController", ['$scope', '$http', function($scope, $http) {
     $scope.myData = [];
-    $scope.showUrl = function(index,e){
+    this.showUrl = function(index,e){
       if(e.show)e.show = false;
       else e.show = true;
     }
 
     var S = 0,
         E = 5;
-    $scope.getMore = function() {
+    this.getMore = function() {
         $http({
             method: 'GET',
             url: 'http://hacker-news.firebaseio.com/v0/topstories.json'
@@ -43,8 +43,8 @@ app.controller("newsController", ['$scope', '$http', function($scope, $http) {
                 })
             })
         })
-        $scope.text = "Lehsoon";
-        console.log($scope.myData);
+        this.text = "Lehsoon";
+        console.log(this.myData);
 
         S = E;
         E += 5;

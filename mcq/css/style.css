@@ -10,6 +10,42 @@ body {
     box-sizing: border-box;
 }
 
+#summary{
+    display: none;
+}
+
+
+.attempted{
+    background: red;
+    border:1px solid #000;
+}
+
+.correct{
+   background: #8bc34a;
+}
+
+.summary_card{
+    background: #eee;
+    border: 1px solid grey;
+    padding: 0.6em 1em;
+    color: #000;
+    box-shadow: 1px 1px 1px 0px;
+    margin-bottom: 20px;
+}
+
+.summary_ques{
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.summary_options{
+    width: 20%;
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-bottom: 1px;
+    border-radius: 2px;
+}
+
 .input-form {
     margin: 20px 0;
 }

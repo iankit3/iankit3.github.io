@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <style type="text/css">
+
+    </style>
+
+    <script type="text/javascript" src="./js/angular.min.js"></script>
+    <script type="text/javascript" src="./js/module.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="container col-md-4"></div>
+    <div class="container col-md-6" ng-hide="showQDiv">
+        <form class="col-md-8">
+          <div class="form-container">
+            <h2>Enter your full name</h2>
+            <div class="input-group input-group-sm col-md-10 input-form">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Firstname">
+            </div>
+            <div class="input-group input-group-sm col-md-10 input-form">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Lastname">
+            </div>
+            <button ng-click="getQues()" type="button" class="btn btn-success  btn-sm form-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6" ng-show="showQDiv">
+        <div class="col-md-8">
+            <form ng-repeat="i in data">
+                <div class="radio" ng-repeat="k in i.option">
+                    <label>
+                        <input ng-click="eachClick($event)" type="radio" name="ques{{k}}" value="{{k}}">{{k}}</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

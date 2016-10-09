@@ -69,12 +69,12 @@
         var left = $(document.createElement('span')).addClass('left').text('<')
             .click(function() {
                 var x = fullElem.position().left;
-                fullElem.css('left', (x + elemWidth) + 'px')
+                fullElem.animate({'left': (x + elemWidth) + 'px'},400)
             })
         var right = $(document.createElement('span')).addClass('right').text('>')
             .click(function() {
                 var x = fullElem.position().left;
-                fullElem.css('left', (x - elemWidth) + 'px')
+                fullElem.animate({'left': (x - elemWidth) + 'px'},400)
             })
 
 

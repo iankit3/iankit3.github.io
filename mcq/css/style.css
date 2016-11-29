@@ -1,0 +1,142 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.center-block {
+    position: relative;
+    top: 20vh;
+    /*padding:2em 4em;*/
+    box-sizing: border-box;
+}
+
+#summary{
+    display: none;
+}
+
+
+.attempted{
+    background: red;
+    border:1px solid #000;
+}
+
+.correct{
+   background: #8bc34a;
+}
+
+.summary_card{
+    background: #eee;
+    border: 1px solid grey;
+    padding: 0.6em 1em;
+    color: #000;
+    box-shadow: 1px 1px 1px 0px;
+    margin-bottom: 20px;
+}
+
+.summary_ques{
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.summary_options{
+    width: 20%;
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-bottom: 1px;
+    border-radius: 2px;
+}
+
+.input-form {
+    margin: 20px 0;
+}
+
+/*.input-group-addon{
+    font-weight: 600;
+    font-size: 1.4em
+}*/
+
+form {
+    background: #f5f5f5;;
+    padding: 5px 10px;
+    /*height: 300px;*/
+    position: relative;
+    top: calc(50vh - 200px);
+    border-radius: 3px;
+    border:1px solid grey;
+    box-shadow: 0 0 2px;
+    margin: auto;
+}
+
+.form-container{
+    margin: 0 8%;
+    padding: 0% 6%;
+}
+
+form h2{
+	/*text-align: center;*/
+    margin-bottom: 40px;
+}
+
+.form-btn{
+	margin:10px 0;
+    /*position: absolute;
+    bottom: 20px;*/
+}
+
+label input[type="radio"]{
+   opacity: 0;
+}
+
+.dot {
+    display: block;
+    position: absolute;
+    background: #00BCD4;
+    border-radius: 50%;
+    /*transform: scale(0);*/
+    left: 21px;
+    width: 3px;
+    height: 3px;
+    top: 9px;
+}
+.dot.animate {animation: ripple 0.6s linear;}
+@keyframes ripple {
+    100% {opacity: 1; transform: scale(4);}
+}
+
+label::before{
+   content: '\25EF';
+   position: relative;
+   font-weight: 800;
+   right: 6px;
+   top: -1px;
+   z-index: 100;
+}
+
+@keyframes fadeout {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

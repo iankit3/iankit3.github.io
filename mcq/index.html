@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <style type="text/css">
+
+    </style>
+
+    <script type="text/javascript" src="./js/angular.min.js"></script>
+    <script type="text/javascript" src="./js/d3.min.js"></script>
+    <script type="text/javascript" src="./js/module.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="container col-md-4"></div>
+    <div class="container col-md-6" ng-hide="showQDiv">
+        <form class="col-md-8">
+          <div class="form-container">
+            <h2>Enter your full name</h2>
+            <div class="input-group input-group-sm col-md-10 input-form">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Firstname" ng-model="name">
+            </div>
+            <div class="input-group input-group-sm col-md-10 input-form">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Lastname">
+            </div>
+            <button ng-click="getQues()" ng-disabled="!name.length" type="button" class="btn btn-success  btn-sm form-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6" ng-show="showQDiv && !showGraph">
+        <div class="col-md-8">
+            <form>
+                <h3>{{selectedQues.ques}}</h3>
+                <div class="radio" ng-repeat="k in selectedQues.option">
+                    <label>
+                        <input ng-click="eachClick($event,$index)" type="radio" name="ques{{k}}" value="{{k}}">{{k}}</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container" id="graphCont" ng-show="showGraph" style="margin-top: 30px ">
+        <div id="graph"></div>
+    </div>
+    <div class="container" id="summary">
+        <div ng-repeat="q in userAnswer">
+            <div class="summary_card">
+             <div class="summary_ques">{{q.ques}}</div>
+             <div ng-repeat="i in q.option" class="summary_options" ng-class="{'attempted':$index == q.uAnsIndex,'correct': $index == q.cAnsIndex }">{{i}}</div>  
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

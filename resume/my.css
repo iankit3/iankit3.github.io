@@ -124,16 +124,16 @@ body {
 }
 
 .nwala {
-    margin-left: 12%;
-    width: 70%;
+    /*margin-left: 12%;*/
+    margin-left: 0;
+    width: 80%;
     padding: 2px 0 0 0px;
     font-size: 1rem;
 }
-/*.nwala > ul{
-  line-height: 2px;
+.nwala > ul{
+  padding-left: 20px;
 }
 .nwala > ul > li{
-  line-height: 1.8px;
 }
 */
 ul li{

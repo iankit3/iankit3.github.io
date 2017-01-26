@@ -1,0 +1,39 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 26/01/2017 10:01
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+    font-size: 28px;
+    font-style: normal;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.flaticon-avatar:before { content: "\f100"; }
+.flaticon-black:before { content: "\f101"; }
+.flaticon-black-settings-button:before { content: "\f102"; }
+.flaticon-configuration-gross-black-cogwheel-symbol-of-interface:before { content: "\f103"; }
+.flaticon-education:before { content: "\f104"; }
+.flaticon-settings-cogwheel-inside-black-square:before { content: "\f105"; }
+.flaticon-social:before { content: "\f106"; }

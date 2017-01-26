@@ -7,10 +7,44 @@
     /* EOT file for IE */
 }
 
+:root {
+  --green: #5aa45c;
+  --green-light: rgba(139, 195, 74, 0.35);
+
+  --orange: #FF9800;
+  --orange-light: rgb(245, 191, 112);
+
+  --bgreen: #009688;
+  --bgreen-light:rgba(109, 160, 156, 0.77);
+
+  --lgreen: #8BC34A;
+  --lgreen-light: rgba(196, 226, 160, 0.88);
+
+  --bred: #E91E63;
+  --bred-light: rgba(234, 114, 155, 0.76);
+
+   /*More colored page:----PAGE COLOR is there in .full elem*/ 
+
+
+  --thememain : var(--lgreen);
+  --themelight: var(--lgreen-light);
+
+  /*--thememain : var(--orange);
+  --themelight: var(--orange-light);*/
+}
+
 body {
     font-size: 14px;
     font-family: roboto;
+    margin: 0;
 }
+
+ a {
+    color: #3F51B5;
+ }      /* unvisited link */
+a:visited {color:#3F51B5;}  /* visited link */
+a:hover {color:#8bc34a;}  /* mouse over link */
+a:active {color:#3F51B5;}  /* selected link */
 
 .a {
     border: 2px solid red;
@@ -20,33 +54,61 @@ body {
     background: whitesmoke;
     width: 99%;
     height: 1200px;
-    margin: 5px;
+   /* margin: 5px;*/
 }
 
 .header {
-    width: 70%;
+    /*width: 70%;
     height: 130px;
-    margin-left: 30%;
+    margin-left: 30%;*/
+    width: 100%;
+    height: 130px;
     background: rgba(128, 128, 128, 0.09);
 }
 
 .sidebar {
     width: 27%;
     background: rgba(139, 195, 74, 0.35);
+    background: var(--themelight);
+    /*background: rgb(245, 191, 112);//Orange*/
     position: absolute;
-    top: 14px;
-    left: 3%;
+    /*top: 14px;*/
+    top: 138px;
+    left: 1%;
     float: left;
-    border: 2px solid green;
+    border: 2px solid #5aa45c;
+    border-color: var(--thememain);
+    /*border:2px solid #FF9800;//Orange Replace all #5aa45c(green) with #FF9800*/
+    border-radius: 2px;
+}
+
+.sidebar img{
+    height: 53px;
 }
 
 .rest {
-    width: 70%;
+    width: 74%;
     position: absolute;
-    margin-top: 10px;
-    left: 32%;
-    /* float: right; */
+    margin-top: 8px;
+    left: 29%;
+    /* float: left; */
     height: 500px;
+}
+
+.rest h1:first-child{
+    background: #5aa45c;
+    background: var(--thememain);
+    color: #222;
+    padding: 0.4em 0.5em;
+    width: 91.6%;
+    margin: 0;
+    border-radius: 2px;
+}
+
+.os h1:first-child{
+    margin-top:30px;
+    width: 91.6%;
+    margin: 0;
 }
 
 .header-right {
@@ -54,14 +116,19 @@ body {
 }
 
 .header-right > h1 {
-    font-family: roboto;
-    font-size: 5em;
+    /*font-family: roboto;*/
+    font-size: 4em;
+    font-weight: 600;
+    padding-top: 0.4em;
+        margin-top: 0;
 }
 
 .header-right > p {
-    font-family: robotoM;
+    /*font-family: robotoM;*/
     font-size: 1.8em;
-    margin-top: -40px;
+    /*margin-top: -40px;*/
+        margin-top: -1.5em;
+    font-weight: 600;
 }
 
 .sidebar img {
@@ -75,59 +142,96 @@ body {
 .h3 span {
     font-family: robotoM;
     font-size: 16px;
+    font-weight: 600;   
+}
+
+.h3 b{
+    color: #5aa45c;
+    color: var(--thememain);
+}
+
+.sideheader{
+    background: #5aa45c;
+    background: var(--thememain);
+    margin: 0;
+    height: 54px;
+    font-size: 2.6em;
+    line-height: 1.3em;
+}
+
+.sideheader img{
+    width:30px;
+}
+
+.sideheader span{
+    vertical-align: bottom;
 }
 
 .side-head {
     padding: 10px;
 }
 
-.h3 > div {
-    font-size: 16px;
+.h3 {
+    font-size: 1em;
     display: inline-block;
 }
 
 .exp {
-    border-bottom: 2px solid white;
+    /* border-bottom: 2px solid white; */
     background: lightgrey;
     padding: 3px;
+    box-shadow: 0 0 2px;
+    margin-bottom: 3px;
 }
 
-.exp > div {
+.exp > span:first-child {
     padding: 2px 0 2px 10px;
+    font-weight: 100;    
 }
 
 .score {
     position: absolute;
-    right: 10px;
-    padding-right: 1em;
+    right: 3rem;
+    /*padding-right: 1rem;*/
     line-height: 25px;
     display: inline-block;
+    margin: -4px;    
 }
 
 .leftwala {
-    width: 15%;
+        width: 15%;
     display: inline-block;
-    color: blue;
+    color: #3F51B5;
     font-family: monospace;
     font-size: 1.2em;
     line-height: 1.8em;
     vertical-align: top;
+    font-weight: 600;
 }
 
 .rightwala {
    /* position: absolute;*/
-    width: 80%;
-    margin-left: 2%;
+    width: 95%;
+    margin-left: 1%;
     display: inline-block;
     font-size: 1.8em;
-    font-family: robotoM;
+    /*font-family: robotoM;*/
+    font-weight: 600;
+}
+
+.rightwala .h3:first-child{
+    background: #222;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 2px;
 }
 
 .nwala {
     /*margin-left: 12%;*/
     margin-left: 0;
     width: 80%;
-    padding: 2px 0 0 0px;
+    /* padding: 2px 0 0 0px; */
+    padding: 2px 0 0 1em;
     font-size: 1rem;
 }
 .nwala > ul{
@@ -154,6 +258,29 @@ ul li{
     .img {
         padding-left: 20px;
         width: 80% !important;
-        height: 100px !important;
+        height: 53px !important;
     }
+   
+    .sidebar{
+        height: calc(100% - 160px);
+    }
+
+   .sideheader {
+     height: 47px;
+     font-size: 2.6em;
+     line-height: 1.5em;
+   }
+   
+   .nwala strong{
+    font-size: 1rem;
+    font-weight: 600;
+   }
+
+   .rightwala > .h3{
+    font-size: 1.1rem;
+   }
+
+   .rightwala >.h3 b{
+    font-size: 1.2rem;
+   }
 }

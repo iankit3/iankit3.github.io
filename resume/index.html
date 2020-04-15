@@ -79,20 +79,15 @@
         background: rgba(128, 128, 128, 0.09);
       }
 
+      .main{
+          display: flex;
+          margin-top: 10px;
+      }
+
       .sidebar {
-        width: 27%;
-        /* background: rgba(139, 195, 74, 0.35); */
-        background: var(--themelight);
-        /*background: rgb(245, 191, 112);//Orange*/
-        position: absolute;
-        /*top: 14px;*/
-        top: 138px;
-        left: 1%;
-        float: left;
-        /* border: 2px solid #5aa45c; */
-        /* border-color: var(--thememain); */
-        /*border:2px solid #FF9800;//Orange Replace all #5aa45c(green) with #FF9800*/
-        /* border-radius: 2px; */
+        width: 28%;
+        margin-left: 10px;
+        margin-top: 2px;
       }
 
       .sidebar img {
@@ -100,10 +95,8 @@
       }
 
       .rest {
-        width: 70%;
-        position: absolute;
-        margin-top: 8px;
-        left: 29%;
+        width: 69.5%;
+        margin-left: 10px;
       }
 
       .rest h1:first-child {
@@ -160,7 +153,6 @@
       }
 
       .sideheader {
-        background: #5aa45c;
         background: var(--thememain);
         /* margin: 0; */
         height: 40px;
@@ -177,9 +169,15 @@
         vertical-align: bottom;
       }
 
+      /* .each-card{
+        margin-top: 0.5em;
+        margin-bottom: 0.6em;
+      } */
+
       .side-head {
         padding: 10px;
         padding-bottom: 10px !important;
+        background: var(--themelight);
       }
 
       .side-head p {
@@ -187,7 +185,7 @@
       }
       .side-head.neu {
         margin-top: 0.5em;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.6em;
       }
 
       .h3 {
@@ -198,13 +196,19 @@
       .exp {
         /* border-bottom: 2px solid white; */
         background: lightgrey;
-        padding: 0.5em;
+        padding: 0.4em;
         border-radius: 0.3em;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.6em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .exp.neu {
+        box-shadow: -2px -2px 2px 0 #eee, 4px 4px 4px 0 rgba(34, 34, 34, 0.7);
       }
 
       .neu {
-        box-shadow: -8px -8px 8px 0 #eee, 8px 8px 8px 0 #222;
+        box-shadow: -8px -8px 8px 0 #eee, 4px 4px 4px 0 rgba(34, 34, 34, 0.7);
       }
 
       .exp > span:first-child {
@@ -212,20 +216,12 @@
         font-weight: 100;
       }
 
-      .score {
-        position: absolute;
-        right: 3rem;
-        /*padding-right: 1rem;*/
-        line-height: 25px;
-        display: inline-block;
-        margin: -4px;
-      }
-
       .rightwala {
         display: inline-block;
         font-size: 1.8em;
         font-weight: 600;
         width: 100%;
+        overflow: hidden;
       }
 
       .rightwala .h3:first-child {
@@ -253,6 +249,13 @@
         position: relative;
       }
 
+      [class^="flaticon-"]::before,
+      [class*=" flaticon-"]::before,
+      [class^="flaticon-"]::after,
+      [class*=" flaticon-"]::after {
+        font-size: 21px;
+      }
+
       @media print {
         body {
           font-size: 12px;
@@ -265,7 +268,7 @@
         }
 
         .sidebar {
-          height: calc(100% - 160px);
+          /* height: calc(100% - 160px); */
         }
 
         .sidebar > .neu {
@@ -273,9 +276,8 @@
         }
 
         .sideheader {
-          height: 47px;
-          font-size: 2.6em;
-          line-height: 1.5em;
+          font-size: 2.2em;
+          line-height: 1.3em;
         }
 
         .nwala strong {
@@ -302,199 +304,201 @@
           <p>Software Engineer , Senseforth AI Research Pvt Ltd.</p>
         </div>
       </div>
-      <div class="sidebar">
-        <div class="neu">
-          <div class="sideheader neu">
-            <i class="flaticon-social"></i> <span>Profile</span>
-          </div>
-          <div class="side-head neu">
-            <div class="h3">
-              <span>Mobile </span>
-              <p>9743997635</p>
+      <div class="main">
+        <div class="sidebar">
+          <div class="each-card">
+            <div class="sideheader neu">
+              <i class="flaticon-social"></i> <span>Profile</span>
             </div>
-            <div class="h3">
-              <span>Email </span>
-              <p>a4ankit@outlook.com</p>
-            </div>
-            <div class="h3">
-              <span>LinkedIn </span>
-              <p>www.linkedin.com/in/iankit3</p>
-            </div>
-            <div class="h3">
-              <span>Address </span>
-              <p>HSR Layout ,Central Silk Board , Bangalore</p>
-            </div>
-            <div class="h3">
-              <span>Github </span>
-              <p>
-                <a target="_blank" href="https://github.com/iankit3"
-                  >https://github.com/iankit3</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="neu">
-          <div class="sideheader neu">
-            <i class="flaticon-black-settings-button"></i
-            ><span> Expertise</span>
-          </div>
-          <div class="side-head neu">
-            <div class="h3 exp neu">
-              <span>java </span> <span class="score">6</span>
-            </div>
-            <div class="h3 exp neu">
-              <span>javaScript </span> <span class="score">9</span>
-            </div>
-            <div class="h3 exp neu">
-              <span>Reactjs </span> <span class="score">9</span>
-            </div>
-            <div class="h3 exp neu">
-              <span>C/C++ </span> <span class="score">4</span>
-            </div>
-            <div class="h3 exp neu">
-              <span>SQL </span> <span class="score">7</span>
-            </div>
-            <div class="h3 exp neu">
-              <span>nodeJs </span> <span class="score">8</span>
-            </div>
-            <div class="h3 exp neu">
-              <span>python </span> <span class="score">5</span>
-            </div>
-            <div class="h3 exp neu">
-              <span>html5,CSS3 </span> <span class="score">9</span>
-            </div>
-            <div class="h3 exp neu">
-              <span>rustlang </span> <span class="score">2</span>
+            <div class="side-head neu">
+              <div class="h3">
+                <span>Mobile </span>
+                <p>9743997635</p>
+              </div>
+              <div class="h3">
+                <span>Email </span>
+                <p>a4ankit@outlook.com</p>
+              </div>
+              <div class="h3">
+                <span>LinkedIn </span>
+                <p>www.linkedin.com/in/iankit3</p>
+              </div>
+              <div class="h3">
+                <span>Address </span>
+                <p>HSR Layout ,Central Silk Board , Bangalore</p>
+              </div>
+              <div class="h3">
+                <span>Github </span>
+                <p>
+                  <a target="_blank" href="https://github.com/iankit3"
+                    >https://github.com/iankit3</a
+                  >
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+          <div class="each-card">
+            <div class="sideheader neu">
+              <i class="flaticon-black-settings-button"></i
+              ><span> Expertise</span>
+            </div>
+            <div class="side-head neu">
+              <div class="h3 exp neu">
+                <span>java </span> <span class="score">6</span>
+              </div>
+              <div class="h3 exp neu">
+                <span>javaScript </span> <span class="score">9</span>
+              </div>
+              <div class="h3 exp neu">
+                <span>Reactjs </span> <span class="score">9</span>
+              </div>
+              <div class="h3 exp neu">
+                <span>C/C++ </span> <span class="score">4</span>
+              </div>
+              <div class="h3 exp neu">
+                <span>SQL </span> <span class="score">7</span>
+              </div>
+              <div class="h3 exp neu">
+                <span>nodeJs </span> <span class="score">8</span>
+              </div>
+              <div class="h3 exp neu">
+                <span>python </span> <span class="score">5</span>
+              </div>
+              <div class="h3 exp neu">
+                <span>html5,CSS3 </span> <span class="score">9</span>
+              </div>
+              <div class="h3 exp neu">
+                <span>rustlang </span> <span class="score">2</span>
+              </div>
+            </div>
+          </div>
 
-        <div class="neu">
-          <div class="sideheader neu">
-            <i class="flaticon-education"></i><span> Education</span>
-          </div>
-          <div class="side-head neu">
-            <div class="h3">
-              <span>Academic</span><br /><br />
-
-              B.Tech in CSE -2011-2015<br />
-              WBUT(Kolkata)
+          <div class="each-card">
+            <div class="sideheader neu">
+              <i class="flaticon-education"></i><span> Education</span>
             </div>
-            <br /><br />
-            <div class="h3"><span>Professional</span></div>
-            <br />
-            Microsoft Virtual Academy <br />
-            'Know it prove it' on Web Development
-          </div>
-        </div>
-      </div>
-      <div class="rest">
-        <h1 class="neu">Experience</h1>
-        <div
-          style="margin-top:10px; margin-bottom: 10px; padding-bottom: 10px;"
-          class="neu"
-        >
-          <div class="rightwala">
-            <div class="h3" style="width: 100%;">
-              Software Engineer @ Senseforth AI Research Pvt Ltd
-              <b>(4.5 years)</b>
+            <div class="side-head neu">
+              <div class="h3">
+                <span>Academic</span><br /><br />
+
+                B.Tech in CSE -2011-2015<br />
+                WBUT(Kolkata)
+              </div>
+              <br /><br />
+              <div class="h3"><span>Professional</span></div>
+              <br />
+              Microsoft Virtual Academy <br />
+              'Know it prove it' on Web Development
             </div>
           </div>
-          <div class="nwala">
-            <ul>
-              <li>
-                Designing and developing scalable backend systems for a perfect
-                mix of consistency and availability
-              </li>
-              <br />
-              <li>Writing performant Web APIs and microservices</li>
-              <br />
-              <li>
-                Creating complete FrontEnd development pipeline across the range
-                of products
-              </li>
-              <br />
-              <li>
-                Improving, maintaning legacy products to cope up with the fast
-                changing Web.
-              </li>
-              <br />
-              <li>
-                Writing modern testable but still backwards compatible Browser
-                side code with latest of the Web
-              </li>
-
-              <br />
-              <li>Moving MVPs, built for POCs to a TDD based codebase</li>
-            </ul>
-          </div>
         </div>
-        <div></div>
-        <div class="os neu">
-          <h1 class="neu">Open Source Contributions</h1>
-          <ul
-            style="font-size: 1rem; margin-top: 10px;display: block;padding-top: 20px; padding-bottom: 20px;"
+        <div class="rest">
+          <h1 class="neu">Experience</h1>
+          <div
+            style="margin-top:10px; margin-bottom: 10px; padding-bottom: 10px;"
             class="neu"
           >
-            <li>
-              <b>PostCSS-inline-svg</b> <br />
-              <a
-                target="_blank"
-                href="https://github.com/TrySound/postcss-inline-svg/commits?author=iankit3"
-              >
-                TrySound/postcss-inline-svg </a
-              ><br />
-              <span>
-                PostCSS plugin to reference an SVG file and control its
-                attributes with CSS syntax.
-              </span>
-            </li>
-            <br />
-            <li>
-              <b>Mozilla Treeherder</b> <br />
-              <a
-                target="_blank"
-                href="https://github.com/mozilla/treeherder/commits?author=iankit3"
-                >mozilla/treeherder</a
-              ><br />
-              <span>A system for managing CI data for Mozilla projects.</span>
-            </li>
-            <br />
+            <div class="rightwala">
+              <div class="h3" style="width: 100%;">
+                Software Engineer @ Senseforth AI Research Pvt Ltd
+                <b>(4.5 years)</b>
+              </div>
+            </div>
+            <div class="nwala">
+              <ul>
+                <li>
+                  Designing and developing scalable backend systems for a
+                  perfect mix of consistency and availability
+                </li>
+                <br />
+                <li>Writing performant Web APIs and microservices</li>
+                <br />
+                <li>
+                  Creating complete FrontEnd development pipeline across the
+                  range of products
+                </li>
+                <br />
+                <li>
+                  Improving, maintaning legacy products to cope up with the fast
+                  changing Web.
+                </li>
+                <br />
+                <li>
+                  Writing modern testable but still backwards compatible Browser
+                  side code with latest of the Web
+                </li>
 
-            <li>
-              <b>Taxi booking admin panel</b> <br /><a
-                target="_blank"
-                href="http://oyicab.surge.sh"
-                >iankit3.github.io/oyi</a
-              ><br />
-              <span
-                >Angular2 based admin panel cum taxi booking dashboard for
-                Oyicab&copy;.</span
-              >
-            </li>
-            <br />
+                <br />
+                <li>Moving MVPs, built for POCs to a TDD based codebase</li>
+              </ul>
+            </div>
+          </div>
+          <div></div>
+          <div class="os neu">
+            <h1 class="neu">Open Source Contributions</h1>
+            <ul
+              style="font-size: 1rem; margin-top: 10px;display: block;padding-top: 20px; padding-bottom: 20px;"
+              class="neu"
+            >
+              <li>
+                <b>PostCSS-inline-svg</b> <br />
+                <a
+                  target="_blank"
+                  href="https://github.com/TrySound/postcss-inline-svg/commits?author=iankit3"
+                >
+                  TrySound/postcss-inline-svg </a
+                ><br />
+                <span>
+                  PostCSS plugin to reference an SVG file and control its
+                  attributes with CSS syntax.
+                </span>
+              </li>
+              <br />
+              <li>
+                <b>Mozilla Treeherder</b> <br />
+                <a
+                  target="_blank"
+                  href="https://github.com/mozilla/treeherder/commits?author=iankit3"
+                  >mozilla/treeherder</a
+                ><br />
+                <span>A system for managing CI data for Mozilla projects.</span>
+              </li>
+              <br />
 
-            <li>
-              <b>IBM Watson speech-to-text-nodejs</b> <br /><a
-                target="_blank"
-                href="https://github.com/watson-developer-cloud/speech-to-text-nodejs/commits?author=iankit3"
-                >IBM Watson STT</a
-              ><br />
-              <span
-                >Sample Node.js Application for the IBM Watson Speech to Text
-                Service.</span
-              >
-            </li>
+              <li>
+                <b>Taxi booking admin panel</b> <br /><a
+                  target="_blank"
+                  href="http://oyicab.surge.sh"
+                  >iankit3.github.io/oyi</a
+                ><br />
+                <span
+                  >Angular2 based admin panel cum taxi booking dashboard for
+                  Oyicab&copy;.</span
+                >
+              </li>
+              <br />
 
-            <hr />
-            <h3 style="margin:0.2em 0;font-weight:normal">More about me :</h3>
-            <strong>
-              <a target="_blank" href="https://github.com/iankit3">
-                https://iankit3.github.io/aboutme/
-              </a>
-            </strong>
-          </ul>
+              <li>
+                <b>IBM Watson speech-to-text-nodejs</b> <br /><a
+                  target="_blank"
+                  href="https://github.com/watson-developer-cloud/speech-to-text-nodejs/commits?author=iankit3"
+                  >IBM Watson STT</a
+                ><br />
+                <span
+                  >Sample Node.js Application for the IBM Watson Speech to Text
+                  Service.</span
+                >
+              </li>
+
+              <hr />
+              <h3 style="margin:0.2em 0;font-weight:normal">More about me :</h3>
+              <strong>
+                <a target="_blank" href="https://github.com/iankit3">
+                  https://iankit3.github.io/aboutme/
+                </a>
+              </strong>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

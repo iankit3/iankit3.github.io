@@ -124,7 +124,7 @@
 
       .os {
         padding-right: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
       }
 
       .os h1:first-child {
@@ -189,11 +189,11 @@
       }
 
       .side-head p {
-        margin: 0.5em 0;
+        margin: 0.4em 0;
       }
       .side-head.neu {
-        margin-top: 0.5em;
-        margin-bottom: 0.6em;
+        margin-top: 0.4em;
+        margin-bottom: 0.5em;
       }
 
       .side-head .h3 {
@@ -218,7 +218,7 @@
         background: lightgrey;
         margin-bottom: 0.8em;
         padding: 0.5em 1em;
-        border-radius: 0.3em;
+        border-radius: 2px;
 
         display: flex;
         align-items: center;
@@ -273,13 +273,16 @@
       }
 
       .nwala > ul {
-        padding-left: 10px;
+        padding-left: 20px;
         margin-top: 5px;
+        margin-left: 20px;
       }
 
       .nwala .li {
-        padding: 0.5em 0.5em;
+        /* padding: 0.1em 0.5em; */
+        padding: 0.1em 0;
         margin: 0.5em 0;
+        display: list-item;
         /* box-shadow: inset -4px -4px 8px 0 #eee, inset 4px 4px 12px 0 rgba(34, 34, 34, 0.7); */
       }
 
@@ -305,6 +308,10 @@
       [class^="flaticon-"]::after,
       [class*=" flaticon-"]::after {
         font-size: 21px;
+      }
+
+      .each-card{
+        margin-bottom: 16px;
       }
 
       .card-body {
@@ -438,35 +445,41 @@
               </div>
               <div class="nwala">
                 <ul>
-                  <div class="neu li">
+                  <div class="li">
                     Designing and developing scalable backend systems for a
                     perfect mix of consistency and availability
                   </div>
 
-                  <div class="neu li">
+                  <div class="li">
                     Writing performant Web APIs and microservices
                   </div>
 
-                  <div class="neu li">
+                  <div class="li">
                     Creating complete FrontEnd development pipeline across the
                     range of products
                   </div>
 
-                  <div class="neu li">
+                  <div class="li">
                     Improving, maintaning legacy products to cope up with the
                     fast changing Web.
                   </div>
 
-                  <div class="neu li">
+                  <div class="li">
                     Writing modern testable but still backwards compatible
                     Browser side code with latest of the Web
                   </div>
 
-                  <div class="neu li">
+                  <div class="li">
                     Moving MVPs, built for POCs to a TDD based codebase
                   </div>
                 </ul>
               </div>
+                <div style="margin-left: 20px; padding: 0 5px 0 0;">
+                    <strong>Key Achievements:</strong>
+                    <div>
+                        Reduced the response time of very crucial chat api by factor of 1.5 by lazyly batching database writes with the help of a queue.
+                    </div>
+                </div>
             </div>
           </div>
           <div class="os">

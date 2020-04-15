@@ -48,6 +48,9 @@
         font-size: 14px;
         font-family: "Rubik", sans-serif, serif;
         margin: 0;
+        width: 210mm;
+        height: 297mm;
+        margin: auto;
       }
 
       a {
@@ -113,14 +116,15 @@
       .main-header {
         background: var(--thememain);
         height: 40px;
-        font-size: 2.1em;
+        font-size: 2em;
         font-weight: 600;
-        line-height: 1.4em;
+        line-height: 1.6em;
         padding: 0 5px;
       }
 
       .os {
         padding-right: 5px;
+        margin-bottom: 10px;
       }
 
       .os h1:first-child {
@@ -158,8 +162,7 @@
         font-weight: 600;
       }
 
-      .h3 b {
-        color: #5aa45c;
+      .h3 strong {
         color: var(--thememain);
       }
 
@@ -168,7 +171,7 @@
         height: 40px;
         font-size: 2em;
         font-weight: 600;
-        line-height: 1.3em;
+        line-height: 1.4em;
       }
 
       .sideheader img {
@@ -247,7 +250,7 @@
       .rightwala .h3:first-child {
         background: #222;
         color: #fff;
-        padding: 2px 5px;
+        padding: 8px 5px;
         border-radius: 2px;
         width: 98%;
         overflow: hidden;
@@ -255,6 +258,13 @@
         box-shadow: 4px -4px 8px 0 #eee, 0px 0px 12px 0 rgba(34, 30, 34, 0.76);
       }
 
+      .rightwala > .h3 {
+        font-size: 1.1rem;
+      }
+
+      .rightwala > .h3 b {
+        font-size: 1.2rem;
+      }
       .nwala {
         margin-left: 0;
         padding: 2px 0 0 0;
@@ -271,6 +281,15 @@
         padding: 0.5em 0.5em;
         margin: 0.5em 0;
         /* box-shadow: inset -4px -4px 8px 0 #eee, inset 4px 4px 12px 0 rgba(34, 34, 34, 0.7); */
+      }
+
+      .nwala strong {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .nwala .li {
+        font-size: 0.89em;
       }
 
       .img {
@@ -293,7 +312,6 @@
         margin-top: 10px;
         display: block;
         padding-bottom: 20px;
-        margin-bottom: 20px;
         background: var(--sec-background);
       }
 
@@ -306,28 +324,6 @@
           padding-left: 20px;
           width: 80% !important;
           height: 53px !important;
-        }
-
-        .sideheader {
-          font-size: 2.2em;
-          line-height: 1.3em;
-        }
-
-        .nwala strong {
-          font-size: 1rem;
-          font-weight: 600;
-        }
-
-        .nwala .li{
-            font-size: 0.89em;
-        }
-
-        .rightwala > .h3 {
-          font-size: 1.1rem;
-        }
-
-        .rightwala > .h3 b {
-          font-size: 1.2rem;
         }
       }
     </style>
@@ -473,7 +469,6 @@
               </div>
             </div>
           </div>
-          <div></div>
           <div class="os">
             <div class="main-header neu">Open Source Contributions</div>
             <ul class="card-body neu" style="padding-top: 20px; ">

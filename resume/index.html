@@ -29,16 +29,11 @@
         --pur: rgb(32, 32, 64);
         --pur-light: rgba(32, 32, 64, 0.6);
 
-        /*More colored page:----PAGE COLOR is there in .full elem*/
-
         --thememain: var(--lgreen);
         --themelight: var(--lgreen-light);
 
         --sec-color: rgb(239, 238, 238);
         --sec-background: rgb(245, 245, 245);
-
-        /*--thememain : var(--orange);
-        --themelight: var(--orange-light);*/
 
         /*
             Maybe use this trick--- make sure that there's a certain amount 
@@ -75,23 +70,19 @@
       }
 
       /* selected link */
-
       .a {
         border: 2px solid red;
       }
 
       .full {
-        /* background: whitesmoke; */
         background: var(--sec-background);
         width: 99%;
         height: 1200px;
-        /* margin: 5px;*/
       }
 
       .header {
         width: 100%;
         height: 130px;
-        /* background: rgba(128, 128, 128, 0.09); */
         background: var(--sec-color);
       }
 
@@ -119,12 +110,13 @@
         padding: 0 5px;
       }
 
-      .rest h1:first-child {
+      .main-header {
         background: var(--thememain);
-        color: #222;
-        padding: 0.4em 0.5em;
-        margin: 0;
-        border-radius: 2px;
+        height: 40px;
+        font-size: 2.1em;
+        font-weight: 600;
+        line-height: 1.4em;
+        padding: 0 5px;
       }
 
       .os {
@@ -141,7 +133,6 @@
       }
 
       .header-right > h1 {
-        /*font-family: roboto;*/
         font-size: 4em;
         font-weight: 600;
         padding-top: 0.4em;
@@ -149,9 +140,7 @@
       }
 
       .header-right > p {
-        /*font-family: robotoM;*/
         font-size: 1.8em;
-        /*margin-top: -40px;*/
         margin-top: -1.5em;
         font-weight: 600;
       }
@@ -165,7 +154,6 @@
       }
 
       .h3 span {
-        /*font-family: robotoM;*/
         font-size: 16px;
         font-weight: 600;
       }
@@ -177,7 +165,6 @@
 
       .sideheader {
         background: var(--thememain);
-        /* margin: 0; */
         height: 40px;
         font-size: 2em;
         font-weight: 600;
@@ -191,11 +178,6 @@
       .sideheader span {
         vertical-align: bottom;
       }
-
-      /* .each-card{
-        margin-top: 0.5em;
-        margin-bottom: 0.6em;
-      } */
 
       .side-head {
         padding: 10px;
@@ -211,16 +193,28 @@
         margin-bottom: 0.6em;
       }
 
+      .side-head .h3 {
+        width: 100%;
+        margin: 5px 0;
+        padding: 0.3em 1em;
+        box-sizing: border-box;
+        border-radius: 2px;
+        line-height: 0.9;
+      }
+
+      .side-head .h3 p:first-child {
+        font-weight: 600;
+      }
+
       .h3 {
         font-size: 1em;
         display: inline-block;
       }
 
-      .exp {
-        /* border-bottom: 2px solid white; */
+      .side-head .h3.exp {
         background: lightgrey;
         margin-bottom: 0.8em;
-        padding: 0.44em 1em;
+        padding: 0.5em 1em;
         border-radius: 0.3em;
 
         display: flex;
@@ -258,18 +252,25 @@
         width: 98%;
         overflow: hidden;
         margin: 0.5% 0.5% 0 0.5%;
-        box-shadow: 4px -4px 8px 0 #eee, 0px 0px 12px 0 rgba(34, 30, 34, 0.76)
+        box-shadow: 4px -4px 8px 0 #eee, 0px 0px 12px 0 rgba(34, 30, 34, 0.76);
       }
 
       .nwala {
         margin-left: 0;
-        padding: 2px 0 0 1em;
+        padding: 2px 0 0 0;
         font-size: 1.1rem;
         margin-right: 5px;
       }
 
       .nwala > ul {
-        padding-left: 20px;
+        padding-left: 10px;
+        margin-top: 5px;
+      }
+
+      .nwala .li {
+        padding: 0.5em 0.5em;
+        margin: 0.5em 0;
+        /* box-shadow: inset -4px -4px 8px 0 #eee, inset 4px 4px 12px 0 rgba(34, 34, 34, 0.7); */
       }
 
       .img {
@@ -291,13 +292,9 @@
         font-size: 1rem;
         margin-top: 10px;
         display: block;
-        /* padding-top: 20px;  */
         padding-bottom: 20px;
         margin-bottom: 20px;
         background: var(--sec-background);
-      }
-      .card-body.neu {
-        /* box-shadow: -7px -7px 7px 0 #efeeee, 7px 7px 7px 0 rgba(34, 34, 34, 0.7); */
       }
 
       @media print {
@@ -319,6 +316,10 @@
         .nwala strong {
           font-size: 1rem;
           font-weight: 600;
+        }
+
+        .nwala .li{
+            font-size: 0.89em;
         }
 
         .rightwala > .h3 {
@@ -347,24 +348,24 @@
               <i class="flaticon-social"></i> <span>Profile</span>
             </div>
             <div class="side-head neu">
-              <div class="h3">
-                <span>Mobile </span>
+              <div class="h3 neu">
+                <p>Mobile</p>
                 <p>9743997635</p>
               </div>
-              <div class="h3">
-                <span>Email </span>
+              <div class="h3 neu">
+                <p>Email</p>
                 <p>a4ankit@outlook.com</p>
               </div>
-              <div class="h3">
-                <span>LinkedIn </span>
+              <div class="h3 neu">
+                <p>LinkedIn</p>
                 <p>www.linkedin.com/in/iankit3</p>
               </div>
-              <div class="h3">
-                <span>Address </span>
+              <div class="h3 neu">
+                <p>Address</p>
                 <p>HSR Layout ,Central Silk Board , Bangalore</p>
               </div>
-              <div class="h3">
-                <span>Github </span>
+              <div class="h3 neu">
+                <p>Github</p>
                 <p>
                   <a target="_blank" href="https://github.com/iankit3"
                     >https://github.com/iankit3</a
@@ -414,63 +415,67 @@
               <i class="flaticon-education"></i><span> Education</span>
             </div>
             <div class="side-head neu">
-              <div class="h3">
-                <span>Academic</span><br />
-
-                B.Tech in CSE -2011-2015<br />
-                WBUT(Kolkata)
+              <div class="h3 neu">
+                <p>Academic</p>
+                <p>B.Tech in CSE -2011-2015 WBUT(Kolkata)</p>
               </div>
-              <br /><br /><br />
-              <div class="h3"><span>Professional</span></div>
-              <br />
-              Microsoft Virtual Academy <br />
-              'Know it prove it' on Web Development
+
+              <div class="h3 neu">
+                <p>Professional</p>
+                <p>
+                  Microsoft Virtual Academy <br />
+                  'Know it prove it' on Web Development
+                </p>
+              </div>
             </div>
           </div>
         </div>
         <div class="rest">
           <div class="os" class="neu">
-            <h1 class="neu">Experience</h1>
-            <div class="card-body neu">
+            <div class="main-header neu">Experience</div>
+            <div class="card-body neu" style="padding-bottom: 10px;">
               <div class="rightwala">
                 <div class="h3">
                   Software Engineer @ Senseforth AI Research Pvt Ltd
-                  <b>(4.5 years)</b>
+                  <strong>(4.5 years)</strong>
                 </div>
               </div>
               <div class="nwala">
                 <ul>
-                  <li>
+                  <div class="neu li">
                     Designing and developing scalable backend systems for a
                     perfect mix of consistency and availability
-                  </li>
-                  <br />
-                  <li>Writing performant Web APIs and microservices</li>
-                  <br />
-                  <li>
+                  </div>
+
+                  <div class="neu li">
+                    Writing performant Web APIs and microservices
+                  </div>
+
+                  <div class="neu li">
                     Creating complete FrontEnd development pipeline across the
                     range of products
-                  </li>
-                  <br />
-                  <li>
+                  </div>
+
+                  <div class="neu li">
                     Improving, maintaning legacy products to cope up with the
                     fast changing Web.
-                  </li>
-                  <br />
-                  <li>
+                  </div>
+
+                  <div class="neu li">
                     Writing modern testable but still backwards compatible
                     Browser side code with latest of the Web
-                  </li>
+                  </div>
 
-                  <br />
-                  <li>Moving MVPs, built for POCs to a TDD based codebase</li>
+                  <div class="neu li">
+                    Moving MVPs, built for POCs to a TDD based codebase
+                  </div>
                 </ul>
               </div>
             </div>
           </div>
           <div></div>
           <div class="os">
-            <h1 class="neu">Open Source Contributions</h1>
+            <div class="main-header neu">Open Source Contributions</div>
             <ul class="card-body neu" style="padding-top: 20px; ">
               <li>
                 <b>PostCSS-inline-svg</b> <br />

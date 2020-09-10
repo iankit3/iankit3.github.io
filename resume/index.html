@@ -1,597 +1,618 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ankit</title>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Rubik"
-      rel="stylesheet"
-    />
-    <link type="text/css" href="./font/flaticon.css" rel="stylesheet" />
+<head>
+	<title>ankit</title>
 
-    <style>
-      :root {
-        --green: rgb(38, 196, 76);
-        --green-light: rgba(38, 196, 76, 0.35);
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet" />
+	<link type="text/css" href="./font/flaticon.css" rel="stylesheet" />
 
-        --orange: rgb(240, 165, 0);
-        --orange-light: rgba(240, 165, 0, 0.6);
+	<style>
+		:root {
+			--green: rgb(38, 196, 76);
+			--green-light: rgba(38, 196, 76, 0.35);
 
-        --bgreen: #009688;
-        --bgreen-light: rgba(109, 160, 156, 0.77);
+			--orange: rgb(240, 165, 0);
+			--orange-light: rgba(240, 165, 0, 0.6);
 
-        --lgreen: rgb(139, 195, 74);
-        --lgreen-light: rgba(139, 195, 74, 0.45);
+			--bgreen: #009688;
+			--bgreen-light: rgba(109, 160, 156, 0.77);
 
-        --bred: #e91e63;
-        --bred-light: rgba(234, 114, 155, 0.76);
+			--lgreen: rgb(139, 195, 74);
+			--lgreen-light: rgba(139, 195, 74, 0.45);
 
-        --pur: rgb(32, 32, 64);
-        --pur-light: rgba(32, 32, 64, 0.6);
+			--bred: #e91e63;
+			--bred-light: rgba(234, 114, 155, 0.76);
 
-        --thememain: var(--lgreen);
-        --themelight: var(--lgreen-light);
+			--pur: rgb(32, 32, 64);
+			--pur-light: rgba(32, 32, 64, 0.6);
 
-        --sec-color: rgb(239, 238, 238);
-        --sec-background: rgb(245, 245, 245);
+            /*--blue: rgb(184 190 245);*/
+            --blue: rgb(119 146 199);
+            /* --blue-light: rgb(184 190 245); */
+            --blue-light: rgb(153 168 197);
+            --blue-bright: rgb(87, 144, 254);
 
-        /*
+			--thememain: var(--blue);
+			--themelight: var(--blue-light);
+
+			--sec-color: rgb(239, 238, 238);
+			--sec-background: rgb(245, 245, 245);
+
+			/*
             Maybe use this trick--- make sure that there's a certain amount 
             of difference when you subtract rgb values of the dark color from the rgb values of
             the light color e.g. #eeeeee i.e. (238+238+238)- (whatever color you pick)
             The difference can be kept as any threshold you want
             Maybe 60% of (256*3)
         */
-      }
+		}
 
-      body {
-        font-size: 14px;
-        font-family: "Rubik", sans-serif, serif;
-        margin: 0;
-        width: 210mm;
-        height: 297mm;
-        margin: auto;
-      }
+		body {
+			font-size: 14px;
+			font-family: "Rubik", sans-serif, serif;
+			margin: 0;
+			width: 210mm;
+			height: 297mm;
+			margin: auto;
+		}
 
-      a {
-        color: #3f51b5;
-      }
+		a {
+			color: #3f51b5;
+		}
 
-      /* unvisited link */
-      a:visited {
-        color: #3f51b5;
-      }
+		/* unvisited link */
+		a:visited {
+			color: #3f51b5;
+		}
 
-      /* visited link */
-      a:hover {
-        color: #8bc34a;
-      }
+		/* visited link */
+		a:hover {
+			color: #8bc34a;
+		}
 
-      /* mouse over link */
-      a:active {
-        color: #3f51b5;
-      }
+		/* mouse over link */
+		a:active {
+			color: #3f51b5;
+		}
 
-      /* selected link */
-      .a {
-        border: 2px solid red;
-      }
+		/* selected link */
+		.a {
+			border: 2px solid red;
+		}
 
-      .full {
-        background: var(--sec-background);
-        width: 99%;
-        height: 1200px;
-      }
+		.full {
+			background: var(--sec-background);
+			width: 100%;
+			height: 1200px;
+		}
 
-      .header {
-        width: 100%;
-        height: 130px;
-        background: var(--sec-color);
-      }
+		.header {
+			width: 100%;
+			height: 130px;
+			background: var(--sec-color);
+            /* background: var(--thememain); */
+            box-sizing: border-box;
+		}
 
-      .main {
-        display: flex;
-        margin-top: 10px;
-        overflow: hidden;
-        width: 101%;
-      }
+		.main {
+			display: flex;
+			margin-top: 10px;
+			overflow: hidden;
+			width: 100%;
+            /* height: calc(1200px - 160px); */
+            height: 100%;
+		}
 
-      .sidebar {
-        width: 28%;
-        margin-left: 10px;
-        margin-top: 1px;
-      }
+		.sidebar {
+            width: 29%;
+            margin-left: 10px;
+            margin-top: 1px;
+            flex: 120px 0 0;
+		}
 
-      .sidebar img {
-        height: 53px;
-      }
+		.sidebar img {
+			height: 53px;
+		}
 
-      .rest {
-        width: 100%;
-        margin-left: 16px;
-        overflow: hidden;
-        padding: 0 5px;
-      }
+		.rest {
+			width: 100%;
+			margin-left: 5px;
+			overflow: hidden;
+			padding: 0 5px;
+            padding-right: 10px;
+		}
 
-      .main-header {
-        background: var(--thememain);
-        /* height: 40px; */
-        font-size: 1.8em;
-        font-weight: 600;
-        line-height: 1.4em;
-        padding: 0 5px;
-      }
+		.main-header {
+			background: var(--thememain);
+			height: 40px;
+			font-size: 1.8em;
+			font-weight: 600;
+			line-height: 1.8em;
+			padding: 0 1em;
+			border-radius: 2px;
+			/* color: #eee; */
+		}
 
-      .os {
-        padding-right: 5px;
-      }
+		.os {
+			padding-right: 5px;
+		}
 
-      .os h1:first-child {
-        margin-top: 30px;
-        margin: 0;
-      }
+		.os h1:first-child {
+			margin-top: 30px;
+			margin: 0;
+		}
 
-      .header-right {
-        padding-left: 5%;
-      }
+		.header-right {
+			padding-left: 5%;
+		}
 
-      .header-right > h1 {
-        font-size: 4em;
-        font-weight: 600;
-        padding-top: 0.4em;
-        margin-top: 0;
-      }
+		.header-right>h1 {
+			font-size: 4em;
+			font-weight: 600;
+			padding-top: 0.4em;
+			margin-top: 0;
+		}
 
-      .header-right > p {
-        font-size: 1.8em;
-        margin-top: -1.5em;
-        font-weight: 600;
-      }
+		.header-right>p {
+			font-size: 1.8em;
+			margin-top: -1.5em;
+			font-weight: 600;
+		}
 
-      .sidebar img {
-        width: 100%;
-      }
+		.sidebar img {
+			width: 100%;
+		}
 
-      .h3 {
-        width: 90%;
-      }
+		.h3 {
+			width: 90%;
+		}
 
-      .h3 span {
-        font-size: 16px;
-        font-weight: 600;
-      }
+		.h3 span {
+			font-size: 16px;
+			font-weight: 600;
+		}
 
-      .h3 strong {
-        color: var(--thememain);
-      }
+		.h3 strong {
+			color: var(--thememain);
+		}
 
-      .sideheader {
-        background: var(--thememain);
-        /* height: 40px; */
-        font-size: 1.8em;
-        font-weight: 600;
-        line-height: 1.4em;
-      }
+		.sideheader {
+			background: var(--thememain);
+			/* height: 40px; */
+			font-size: 1.8em;
+			font-weight: 600;
+			line-height: 1.4em;
+			border-radius: 2px;
+			/* color: #eee; */
+		}
 
-      .sideheader img {
-        width: 30px;
-      }
+		.sideheader img {
+			width: 30px;
+		}
 
-      .sideheader span {
-        vertical-align: bottom;
-      }
+		.sideheader span {
+			vertical-align: bottom;
+		}
 
-      .side-head {
-        padding: 10px;
-        padding-bottom: 10px !important;
-        background: var(--themelight);
-      }
+		.side-head {
+			padding: 10px;
+			padding-bottom: 10px !important;
+			background: var(--themelight);
+		}
 
-      .side-head p {
-        margin: 0.4em 0;
-      }
-      .side-head.neu {
-        margin-top: 0.4em;
-        margin-bottom: 0.5em;
-      }
+		.side-head p {
+			margin: 0.4em 0;
+		}
 
-      .side-head .h3 {
-        width: 100%;
-        margin: 5px 0;
-        padding: 0.3em 1em;
-        box-sizing: border-box;
-        border-radius: 2px;
-        line-height: 0.9;
-      }
+		.side-head.neu {
+			margin-top: 0.4em;
+			margin-bottom: 0.5em;
+		}
 
-      .side-head .h3 p:first-child {
-        font-weight: 600;
-      }
+		.side-head .h3 {
+			width: 100%;
+			margin: 5px 0;
+			padding: 0.3em 1em;
+			box-sizing: border-box;
+			border-radius: 2px;
+			line-height: 0.9;
+			background: lightgrey;
+		}
 
-      .h3 {
-        font-size: 1em;
-        display: inline-block;
-      }
+		.side-head .h3 p:first-child {
+			font-weight: 600;
+		}
 
-      .side-head .h3.exp {
-        background: lightgrey;
-        margin-bottom: 0.8em;
-        padding: 0.5em 1em;
-        border-radius: 2px;
+		.h3 {
+			font-size: 1em;
+			display: inline-block;
+		}
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+		.side-head .h3.exp {
+			background: lightgrey;
+			margin-bottom: 0.8em;
+			padding: 0.5em 1em;
+			border-radius: 2px;
 
-        box-sizing: border-box;
-        width: 100%;
-      }
-      .exp.neu {
-        box-shadow: -2px -2px 2px 0 #eee, 4px 4px 8px 0 rgba(34, 34, 34, 0.7);
-      }
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 
-      .neu {
-        box-shadow: -4px -4px 8px 0 #eee, 4px 4px 12px 0 rgba(34, 34, 34, 0.7);
-      }
+			box-sizing: border-box;
+			width: 100%;
+		}
 
-      .exp > span:first-child {
-        font-weight: 100;
-      }
+		.exp.neu,
+		.side-head .h3.neu {
+			box-shadow: -2px -2px 2px 0 #eee, 4px 4px 8px 0 rgba(34, 34, 34, 0.7);
+		}
 
-      .rightwala {
-        display: inline-block;
-        font-size: 1.8em;
-        font-weight: 600;
-        width: 100%;
-        overflow: hidden;
-      }
+		.neu {
+			box-shadow: -4px -4px 8px 0 #eee, 4px 4px 12px 0 rgba(34, 34, 34, 0.7);
+		}
 
-      .rightwala .h3:first-child {
-        background: #222;
-        color: #fff;
-        padding: 8px 5px;
-        border-radius: 2px;
-        width: 98%;
-        overflow: hidden;
-        margin: 0.5% 0.5% 0 0.5%;
-        box-shadow: 4px -4px 8px 0 #eee, 0px 0px 12px 0 rgba(34, 30, 34, 0.76);
-      }
+		.exp>span:first-child {
+			font-weight: 100;
+		}
 
-      .rightwala > .h3 {
-        font-size: 1.1rem;
-      }
-
-      .rightwala > .h3 b {
-        font-size: 1.2rem;
-      }
-      .nwala {
-        margin-left: 0;
-        padding: 2px 0 0 0;
-        font-size: 1.1rem;
-        margin-right: 5px;
-      }
-
-      .nwala > ul {
-        padding-left: 20px;
-        margin-top: 5px;
-        margin-left: 20px;
-      }
-
-      .nwala .li {
-        /* padding: 0.1em 0.5em; */
-        padding: 0.1em 0;
-        margin: 0.5em 0;
-        display: list-item;
-        /* box-shadow: inset -4px -4px 8px 0 #eee, inset 4px 4px 12px 0 rgba(34, 34, 34, 0.7); */
-      }
-
-      .nwala strong {
-        font-size: 1rem;
-        font-weight: 600;
-      }
-
-      .nwala .li {
-        font-size: 0.89em;
-      }
-
-      .img {
-        width: 58%;
-        padding-left: 5em;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        position: relative;
-      }
-
-      [class^="flaticon-"]::before,
-      [class*=" flaticon-"]::before,
-      [class^="flaticon-"]::after,
-      [class*=" flaticon-"]::after {
-        font-size: 21px;
-      }
-
-      .each-card{
-        margin-bottom: 16px;
-      }
-
-      .card-body {
-        font-size: 1rem;
-        margin-top: 10px;
-        display: block;
-        padding-bottom: 20px;
-        background: var(--sec-background);
-      }
-
-     .capsule{
-        background: var(--bgreen);
-        padding: 2px 6px;
-        border-radius: 0.5em;
-        font-size: 0.8em;
-        color: #fff;
-        display: inline-block;
-        margin-bottom: 2px;
-     }
-
-     .stack{
-         margin-left: 1.2em;
-     }
-
-     .keyc{
-        padding: 2px 3px;
-        font-size: 0.9em;
-        background: #222;
-        color: #fff;
-        margin-left: 1em;
-     }
-
-     .keyci{
-        font-size: 0.8em;
-        margin-left: 2em;
-        margin-top: 5px;
-     }
-
-      @media print {
-        body {
-          font-size: 12px;
+        .main-body{
+            margin-bottom: 10px;
         }
 
-        .img {
-          padding-left: 20px;
-          width: 80% !important;
-          height: 53px !important;
-        }
-      }
-    </style>
-  </head>
+		.rightwala {
+			display: inline-block;
+			font-size: 1.8em;
+			font-weight: 600;
+			width: 100%;
+			overflow: hidden;
+		}
 
-  <body>
-    <div class="full">
-      <div class="header neu">
-        <div class="header-right">
-          <h1>Ankit Kumar</h1>
-          <p>Senior Software Engineer, Altimetrik India Pvt Ltd.</p>
-        </div>
-      </div>
-      <div class="main">
-        <div class="sidebar">
-          <div class="each-card">
-            <div class="sideheader neu">
-              <i class="flaticon-social"></i> <span>Profile</span>
-            </div>
-            <div class="side-head neu">
-              <div class="h3 neu">
-                <p>Mobile</p>
-                <p><a href="tel:+919743997635">+91-9743997635</a></p>
-              </div>
-              <div class="h3 neu">
-                <p>Email</p>
-                <p><a href="mailto:a4ankit@outlook.com">a4ankit@outlook.com</a></p>
-              </div>
-              <div class="h3 neu">
-                <p>LinkedIn</p>
-                <p><a href="https://www.linkedin.com/in/iankit3" target="_blank">www.linkedin.com/in/iankit3</a></p>
-              </div>
-              <div class="h3 neu">
-                <p>Address</p>
-                <p>HSR Layout, Central Silk Board, Bangalore</p>
-              </div>
-              <div class="h3 neu">
-                <p>Github</p>
-                <p>
-                  <a target="_blank" href="https://github.com/iankit3"
-                    >https://github.com/iankit3</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="each-card">
-            <div class="sideheader neu">
-              <i class="flaticon-black-settings-button"></i
-              ><span> Expertise</span>
-            </div>
-            <div class="side-head neu">
-              <div class="h3 exp neu">
-                <span>Java/J2EE </span> <span class="score">6</span>
-              </div>
-              <div class="h3 exp neu">
-                <span>Scala </span> <span class="score">3</span>
-              </div>
-              <div class="h3 exp neu">
-                <span>JavaScript </span> <span class="score">9</span>
-              </div>
-              <div class="h3 exp neu">
-                <span>Reactjs </span> <span class="score">9</span>
-              </div>
-              <div class="h3 exp neu">
-                <span>SQL </span> <span class="score">7</span>
-              </div>
-              <div class="h3 exp neu">
-                <span>NodeJs </span> <span class="score">8</span>
-              </div>
-              <div class="h3 exp neu">
-                <span>C/C++ </span> <span class="score">3</span>
-              </div>
-              <div class="h3 exp neu">
-                <span>Rustlang </span> <span class="score">2</span>
-              </div>
-            </div>
-          </div>
+		.rightwala .h3:first-child {
+			background: #222;
+			color: #fff;
+			padding: 8px 5px;
+			border-radius: 2px;
+			width: 98%;
+			overflow: hidden;
+			margin: 0.5% 0.5% 0 0.5%;
+			box-shadow: 4px -4px 8px 0 #eee, 0px 0px 12px 0 rgba(34, 30, 34, 0.76);
+		}
 
-          <div class="each-card">
-            <div class="sideheader neu">
-              <i class="flaticon-education"></i><span> Education</span>
-            </div>
-            <div class="side-head neu">
-              <div class="h3 neu">
-                <p>Academic</p>
-                <p>B.Tech in CSE -2011-2015 WBUT(Kolkata)</p>
-              </div>
-               <div class="h3 neu">
-                <p>Professional</p>
-                <p>
-                  Microsoft Virtual Academy <br />
-                  'Know it prove it' on Web Development
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="rest">
-          <div class="os" class="neu">
-            <div class="main-header neu">Experience</div>
-            <div class="card-body" style="padding-bottom: 10px;">
-              <div class="rightwala">
-                <div class="h3">
-                  FullStack Engineer @ PayPal (AWF)
-                  <strong>(0.5 years)</strong>
-                </div>
-              </div>
-              <div class="nwala">
-                <div class="stack">
-                    <span class="capsule">Scala</span>
-                    <span class="capsule">PlayFramework</span>
-                    <span class="capsule">Slick</span> 
-                    <span class="capsule">Postgres</span>
-                    <span class="capsule">Reactjs</span>
-                    <span class="capsule">Angularjs</span>
-                    <span class="capsule">Nodejs</span>
-                    <span class="capsule">Docker</span>
-                    <span class="capsule">Kubernetes</span>
-                    <span class="capsule">Jenkins</span>
-                    <span class="capsule">DataDog</span>
-                    <span class="capsule">Github</span>
-                </div>
-                <ul>
-                  <div class="li">
-                    Resposibile for end to end maintainence of an application in deprication phase.
-                  </div>
+		.rightwala>.h3 {
+			font-size: 1.1rem;
+		}
 
-                  <div class="li">
-                    Migrating Angularjs codebase to a TDD React codebase.
-                  </div>
+		.rightwala>.h3 b {
+			font-size: 1.2rem;
+		}
 
-                  <div class="li">
-                    Transforming Play based MVC backend to Rest
-                  </div>
+		.nwala {
+			margin-left: 0;
+			padding: 2px 0 0 0;
+			font-size: 1.1rem;
+			margin-right: 5px;
+		}
 
-                </ul>
-                  <div>
-                    <span class="neu keyc">Key contribution :-</span><br />
-                    <div class="keyci">
-                        <i>Developed client-side error monitoring system and Dashboard using DataDog</i>
-                    </div>
-                  <div>
-              </div>
-            </div>
-            <div class="card-body neu" style="padding-bottom: 10px;">
-              <div class="rightwala">
-                <div class="h3">
-                  Software Engineer @ Senseforth AI Research Pvt Ltd
-                  <strong>(4.5 years)</strong>
-                </div>
-              </div>
-              <div class="nwala">
-                <div class="stack">
-                    <span class="capsule">Java</span>
-                    <span class="capsule">J2EE</span>
-                    <span class="capsule">MySql</span>
-                    <span class="capsule">Reactjs</span>
-                    <span class="capsule">Angularjs</span>
-                    <span class="capsule">Nodejs</span>
-                    <span class="capsule">Docker</span>
-                </div>
-                <ul>
-                  <div class="li">
-                    Designing and developing scalable backend systems for a
-                    perfect mix of consistency and availability
-                  </div>
+		.nwala>ul {
+			padding-left: 20px;
+			margin-top: 5px;
+			margin-left: 20px;
+		}
 
-                  <div class="li">
-                    Writing performant Web APIs and microservices and creating complete FrontEnd development pipeline across the
-                    range of products
-                  </div>
+		.nwala .li {
+			/* padding: 0.1em 0.5em; */
+			padding: 0.1em 0;
+			margin: 0.5em 0;
+			display: list-item;
+			/* box-shadow: inset -4px -4px 8px 0 #eee, inset 4px 4px 12px 0 rgba(34, 34, 34, 0.7); */
+		}
 
-                  <!-- <div class="li">
+		.nwala strong {
+			font-size: 1rem;
+			font-weight: 600;
+		}
+
+		.nwala .li {
+			font-size: 0.89em;
+		}
+
+		.img {
+			width: 58%;
+			padding-left: 5em;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			position: relative;
+		}
+
+		[class^="flaticon-"]::before,
+		[class*=" flaticon-"]::before,
+		[class^="flaticon-"]::after,
+		[class*=" flaticon-"]::after {
+			font-size: 21px;
+		}
+
+		.each-card {
+			margin-bottom: 16px;
+		}
+
+		.card-body {
+			font-size: 1rem;
+			margin-top: 10px;
+			display: block;
+			padding-bottom: 20px;
+			background: var(--sec-background);
+		}
+
+		.capsule {
+			background: var(--blue-bright);
+			padding: 2px 6px;
+			border-radius: 0.5em;
+			font-size: 0.8em;
+			color: #fff;
+			display: inline-block;
+			margin-bottom: 2px;
+		}
+
+		.stack {
+			margin-left: 1.2em;
+		}
+
+		.keyc {
+			padding: 2px 3px;
+			font-size: 0.9em;
+			background: #222;
+			color: #fff;
+			margin-left: 1em;
+		}
+
+		.keyci {
+			font-size: 0.8em;
+			margin-left: 2em;
+			margin-top: 5px;
+		}
+
+		@media print {
+			body {
+				font-size: 12px;
+			}
+
+			.img {
+				padding-left: 20px;
+				width: 80% !important;
+				height: 53px !important;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="full">
+		<div class="header neu">
+			<div class="header-right">
+				<h1>Ankit Kumar</h1>
+				<p>Senior Software Engineer, Altimetrik India Pvt Ltd.</p>
+			</div>
+		</div>
+		<div class="main neu">
+			<div class="sidebar">
+				<div class="each-card">
+					<div class="sideheader neu">
+						<i class="flaticon-social"></i> <span>Profile</span>
+					</div>
+					<div class="side-head neu">
+						<div class="h3 neu">
+							<p>Mobile</p>
+							<p><a href="tel:+919743997635">+91-9743997635</a></p>
+						</div>
+						<div class="h3 neu">
+							<p>Email</p>
+							<p><a href="mailto:a4ankit@outlook.com">a4ankit@outlook.com</a></p>
+						</div>
+						<div class="h3 neu">
+							<p>LinkedIn</p>
+							<p>
+                                <a href="https://www.linkedin.com/in/iankit3"
+									target="_blank">www.linkedin.com/in/iankit3
+                                </a>
+                            </p>
+						</div>
+						<div class="h3 neu">
+							<p>Address</p>
+							<p>HSR Layout, Central Silk Board, Bangalore</p>
+						</div>
+						<div class="h3 neu">
+							<p>Github</p>
+							<p>
+								<a target="_blank" href="https://github.com/iankit3">https://github.com/iankit3</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="each-card">
+					<div class="sideheader neu">
+						<i class="flaticon-black-settings-button"></i><span> Expertise</span>
+					</div>
+					<div class="side-head neu">
+						<div class="h3 exp neu">
+							<span>Java/J2EE </span> <span class="score">6</span>
+						</div>
+						<div class="h3 exp neu">
+							<span>Scala </span> <span class="score">3</span>
+						</div>
+						<div class="h3 exp neu">
+							<span>JavaScript </span> <span class="score">9</span>
+						</div>
+						<div class="h3 exp neu">
+							<span>Reactjs </span> <span class="score">9</span>
+						</div>
+						<div class="h3 exp neu">
+							<span>SQL </span> <span class="score">7</span>
+						</div>
+						<div class="h3 exp neu">
+							<span>NodeJs </span> <span class="score">8</span>
+						</div>
+						<div class="h3 exp neu">
+							<span>C/C++ </span> <span class="score">3</span>
+						</div>
+						<div class="h3 exp neu">
+							<span>Rustlang </span> <span class="score">2</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="each-card">
+					<div class="sideheader neu">
+						<i class="flaticon-education"></i><span> Education</span>
+					</div>
+					<div class="side-head neu">
+						<div class="h3 neu">
+							<p>Academic</p>
+							<p>B.Tech in CSE -2011-2015 WBUT(Kolkata)</p>
+						</div>
+						<div class="h3 neu">
+							<p>Professional</p>
+							<p>
+								Microsoft Virtual Academy <br />
+                                'Know it prove it' on Web Development
+                            </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rest">
+				<!-- <div class="os"> -->
+					<div class="main-header neu">Experience</div>
+					<div class="main-body">
+						<div class="card-body neu" style="padding-bottom: 10px;">
+							<div class="rightwala">
+								<div class="h3">
+									FullStack Engineer @ PayPal (AWF)
+									<strong>(0.5 years)</strong>
+								</div>
+							</div>
+							<div class="nwala">
+								<div class="stack">
+									<span class="capsule">Scala</span>
+									<span class="capsule">PlayFramework</span>
+									<span class="capsule">Slick</span>
+									<span class="capsule">Postgres</span>
+									<span class="capsule">Reactjs</span>
+									<span class="capsule">Angularjs</span>
+									<span class="capsule">Nodejs</span>
+									<span class="capsule">Docker</span>
+									<span class="capsule">Kubernetes</span>
+									<span class="capsule">Jenkins</span>
+									<span class="capsule">DataDog</span>
+									<span class="capsule">Github</span>
+								</div>
+								<ul>
+									<div class="li">
+										Resposibile for end to end maintainence of an application in deprication phase.
+									</div>
+
+									<div class="li">
+										Migrating Angularjs codebase to a TDD React codebase.
+									</div>
+
+									<div class="li">
+										Transforming Play based MVC backend to Rest
+									</div>
+
+								</ul>
+								<div>
+									<span class="neu keyc">Key contribution :-</span><br />
+									<div class="keyci">
+										<i>Developed client-side error monitoring system and Dashboard using DataDog</i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-body neu" style="padding-bottom: 10px;">
+							<div class="rightwala">
+								<div class="h3">
+									Software Engineer @ Senseforth AI Research Pvt Ltd
+									<strong>(4.6 years)</strong>
+								</div>
+							</div>
+							<div class="nwala">
+								<div class="stack">
+									<span class="capsule">Java</span>
+									<span class="capsule">J2EE</span>
+									<span class="capsule">MySql</span>
+									<span class="capsule">Reactjs</span>
+									<span class="capsule">Angularjs</span>
+									<span class="capsule">Nodejs</span>
+									<span class="capsule">Docker</span>
+								</div>
+								<ul>
+									<div class="li">
+										Designing and developing scalable backend systems for a
+										perfect mix of consistency and availability
+									</div>
+
+									<div class="li">
+										Writing performant Web APIs and microservices and creating complete FrontEnd
+										development pipeline across the
+										range of products
+									</div>
+
+									<!-- <div class="li">
                     Creating complete FrontEnd development pipeline across the
                     range of products
                   </div> -->
 
-                  <div class="li">
-                    Writing modern testable but still backwards compatible
-                    Browser side code with latest of the Web
-                  </div>
+									<div class="li">
+										Writing modern testable but still backwards compatible
+										Browser side code with latest of the Web
+									</div>
 
-                  <div class="li">
-                    Moving MVPs, built for POCs to a TDD based codebase
-                  </div>
-                </ul>
-              </div>
-                <!-- <div style="margin-left: 20px; padding: 0 5px 0 0;">
+									<div class="li">
+										Moving MVPs, built for POCs to a TDD based codebase
+									</div>
+								</ul>
+							</div>
+							<!-- <div style="margin-left: 20px; padding: 0 5px 0 0;">
                     <strong>Key Achievements:</strong>
                     <div>
                         Reduced the response time of very crucial chat api by factor of 1.5 by lazyly batching database writes with the help of a queue.
                     </div>
                 </div> -->
-            </div>
-          </div>
-          <div class="os">
-            <div class="main-header neu">Open Source Contributions</div>
-            <ul class="card-body neu" style="padding-top: 20px; ">
-              <li>
-                <b>PostCSS-inline-svg</b> <br />
-                <a
-                  target="_blank"
-                  href="https://github.com/TrySound/postcss-inline-svg/commits?author=iankit3"
-                >
-                  TrySound/postcss-inline-svg </a
-                ><br />
-                <span>
-                  PostCSS plugin to reference an SVG file and control its
-                  attributes with CSS syntax.
-                </span>
-              </li>
-              <br />
-              <li>
-                <b>Mozilla Treeherder</b> <br />
-                <a
-                  target="_blank"
-                  href="https://github.com/mozilla/treeherder/commits?author=iankit3"
-                  >mozilla/treeherder</a
-                ><br />
-                <span>A system for managing CI data for Mozilla projects.</span>
-              </li>
-              <br />
-              <hr />
-              <h3 style="margin:0.2em 0;font-weight:normal">More about me :</h3>
-              <strong>
-                <a target="_blank" href="https://github.com/iankit3">
-                  https://iankit3.github.io/aboutme/
-                </a>
-              </strong>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+						</div>
+					</div>
+					<div class="">
+						<div class="main-header neu">Open Source Contributions</div>
+						<ul class="card-body neu" style="padding-top: 10px; ">
+							<li>
+								<b>PostCSS-inline-svg</b> <br />
+								<a target="_blank"
+									href="https://github.com/TrySound/postcss-inline-svg/commits?author=iankit3">
+									TrySound/postcss-inline-svg </a><br />
+								<span>
+                                    PostCSS plugin to reference an SVG file and control its
+                                    attributes with CSS syntax.
+                                </span>
+							</li>
+							<br />
+							<li>
+								<b>Mozilla Treeherder</b> <br />
+								<a target="_blank"
+									href="https://github.com/mozilla/treeherder/commits?author=iankit3">mozilla/treeherder</a><br />
+								<span>A system for managing CI data for Mozilla projects.</span>
+							</li>
+							<br />
+							<hr />
+							<h3 style="margin:0.2em 0;font-weight:normal">More about me :</h3>
+							<strong>
+                                <a target="_blank" href="https://github.com/iankit3">
+                                https://iankit3.github.io/aboutme/
+                                </a>
+                            </strong>
+						</ul>
+					</div>
+				<!-- </div> -->
+			</div>
+		</div>
+</body>
+
 </html>

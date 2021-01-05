@@ -20,23 +20,26 @@
 
 			--lgreen: rgb(139, 195, 74);
 			--lgreen-light: rgba(139, 195, 74, 0.45);
-            --lgreen-bright: var(--bgreen);
+			--lgreen-bright: var(--bgreen);
 
+			--lbgreen: rgb(127, 210, 202);
+			--lbgreen-light: rgba(127, 210, 202, 0.45);
+			
 			--bred: #e91e63;
 			--bred-light: rgba(234, 114, 155, 0.76);
 
 			--pur: rgb(32, 32, 64);
 			--pur-light: rgba(32, 32, 64, 0.6);
 
-            /*--blue: rgb(184 190 245);*/
-            --blue: rgb(119 146 199);
-            /* --blue-light: rgb(184 190 245); */
-            --blue-light: rgb(153 168 197);
-            --blue-bright: rgb(87, 144, 254);
+			/*--blue: rgb(184 190 245);*/
+			--blue: rgb(119 146 199);
+			/* --blue-light: rgb(184 190 245); */
+			--blue-light: rgb(153 168 197);
+			--blue-bright: rgb(87, 144, 254);
 
 			--thememain: var(--lgreen);
 			--themelight: var(--lgreen-light);
-            --themebright: var(--lgreen-bright);
+			--themebright: var(--lgreen-bright);
 
 			--sec-color: rgb(239, 238, 238);
 			--sec-background: rgb(245, 245, 245);
@@ -91,10 +94,10 @@
 
 		.header {
 			width: 100%;
-			height: 130px;
+			height: 110px;
 			background: var(--sec-color);
-            /* background: var(--thememain); */
-            box-sizing: border-box;
+			/* background: var(--thememain); */
+			box-sizing: border-box;
 		}
 
 		.main {
@@ -102,15 +105,14 @@
 			margin-top: 10px;
 			overflow: hidden;
 			width: 100%;
-            /* height: calc(1200px - 160px); */
-            height: 100%;
+			/* height: calc(1200px - 160px); */
+			height: 100%;
 		}
 
 		.sidebar {
-            width: 29%;
-            margin-left: 10px;
-            margin-top: 1px;
-            flex: 120px 0 0;
+			/* margin-left: 10px; */
+			margin-top: 1px;
+			flex: 1;
 		}
 
 		.sidebar img {
@@ -118,20 +120,17 @@
 		}
 
 		.rest {
-			width: 100%;
 			margin-left: 5px;
 			overflow: hidden;
 			padding: 0 5px;
-            padding-right: 10px;
+			flex: 3;
 		}
 
 		.main-header {
 			background: var(--thememain);
-			height: 40px;
 			font-size: 1.8em;
 			font-weight: 600;
-			line-height: 1.8em;
-			padding: 0 1em;
+			padding: 2px 1em;
 			border-radius: 2px;
 			/* color: #eee; */
 		}
@@ -150,14 +149,14 @@
 		}
 
 		.header-right>h1 {
-			font-size: 4em;
+			font-size: 3.5em;
 			font-weight: 600;
 			padding-top: 0.4em;
 			margin-top: 0;
 		}
 
 		.header-right>p {
-			font-size: 1.8em;
+			font-size: 1.6em;
 			margin-top: -1.5em;
 			font-weight: 600;
 		}
@@ -181,12 +180,10 @@
 
 		.sideheader {
 			background: var(--thememain);
-			/* height: 40px; */
 			font-size: 1.8em;
 			font-weight: 600;
-			line-height: 1.4em;
+			padding: 2px;
 			border-radius: 2px;
-			/* color: #eee; */
 		}
 
 		.sideheader img {
@@ -195,6 +192,7 @@
 
 		.sideheader span {
 			vertical-align: bottom;
+			padding-left: 10px;
 		}
 
 		.side-head {
@@ -224,6 +222,14 @@
 
 		.side-head .h3 p:first-child {
 			font-weight: 600;
+		}
+
+		.h2 {
+			margin-bottom: 8px;
+			background: #222;
+			padding: 2px 10px;
+			font-size: 1em;
+			color: #eee;
 		}
 
 		.h3 {
@@ -258,9 +264,9 @@
 			font-weight: 100;
 		}
 
-        .main-body{
-            margin-bottom: 10px;
-        }
+		.main-body {
+			margin-bottom: 10px;
+		}
 
 		.rightwala {
 			display: inline-block;
@@ -290,10 +296,9 @@
 		}
 
 		.nwala {
-			margin-left: 0;
 			padding: 2px 0 0 0;
 			font-size: 1.1rem;
-			margin-right: 5px;
+			margin: 0 4px;
 		}
 
 		.nwala>ul {
@@ -303,11 +308,16 @@
 		}
 
 		.nwala .li {
-			/* padding: 0.1em 0.5em; */
 			padding: 0.1em 0;
-			margin: 0.5em 0;
+			margin: 0.2em 0;
 			display: list-item;
 			/* box-shadow: inset -4px -4px 8px 0 #eee, inset 4px 4px 12px 0 rgba(34, 34, 34, 0.7); */
+		}
+
+		.nwala.sub {
+			margin-bottom: 10px;
+			padding: 0 4px;
+			padding-bottom: 5px;
 		}
 
 		.nwala strong {
@@ -316,7 +326,7 @@
 		}
 
 		.nwala .li {
-			font-size: 0.89em;
+			font-size: 0.85em;
 		}
 
 		.img {
@@ -342,8 +352,14 @@
 			font-size: 1rem;
 			margin-top: 10px;
 			display: block;
-			padding-bottom: 20px;
-			background: var(--sec-background);
+			/* padding-bottom: 20px; */
+			/* background: var(--sec-background); */
+			background: var(--sec-color);
+		}
+
+		ul.card-body {
+			padding-left: 2em;
+			padding-bottom: 5px;
 		}
 
 		.capsule {
@@ -374,6 +390,14 @@
 			margin-top: 5px;
 		}
 
+		.subscript{
+			font-size: 0.4em;
+			font-weight:100;
+			vertical-align: middle;
+			border-radius: 4px;
+			margin-left: 5px;
+		}
+
 		@media print {
 			body {
 				font-size: 12px;
@@ -392,7 +416,7 @@
 	<div class="full">
 		<div class="header neu">
 			<div class="header-right">
-				<h1>Ankit Kumar</h1>
+				<h1>Ankit Kumar <span class="capsule subscript">5.2 years</span></h1>
 				<p>Senior Software Engineer, Altimetrik India Pvt Ltd.</p>
 			</div>
 		</div>
@@ -414,10 +438,10 @@
 						<div class="h3 neu">
 							<p>LinkedIn</p>
 							<p>
-                                <a href="https://www.linkedin.com/in/iankit3"
-									target="_blank">www.linkedin.com/in/iankit3
-                                </a>
-                            </p>
+								<a href="https://www.linkedin.com/in/iankit3"
+									target="_blank">linkedin.com/in/iankit3
+								</a>
+							</p>
 						</div>
 						<div class="h3 neu">
 							<p>Address</p>
@@ -476,126 +500,144 @@
 							<p>Professional</p>
 							<p>
 								Microsoft Virtual Academy <br />
-                                'Know it prove it' on Web Development
-                            </p>
+								'Know it prove it' on Web Development
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="rest">
 				<!-- <div class="os"> -->
-					<div class="main-header neu">Experience</div>
-					<div class="main-body">
-						<div class="card-body neu" style="padding-bottom: 10px;">
-							<div class="rightwala">
-								<div class="h3">
-									FullStack Engineer @ PayPal (Contingent Worker)
-									<strong>(0.6 years)</strong>
-								</div>
+				<div class="main-header neu">Experience</div>
+				<div class="main-body">
+					<div class="card-body neu">
+						<div class="rightwala">
+							<div class="h3">
+								Engineer @ PayPal (Contingent Worker)
+								<strong>(0.8 years)</strong>
 							</div>
-							<div class="nwala">
-								<div class="stack">
-									<span class="capsule">Reactjs</span>
-									<span class="capsule">Angularjs</span>
-									<span class="capsule">Nodejs</span>
-									<span class="capsule">Scala</span>
-									<span class="capsule">PlayFramework</span>
-									<span class="capsule">Slick</span>
-									<span class="capsule">Postgres</span>
-									<span class="capsule">Docker</span>
-									<span class="capsule">Kubernetes</span>
-									<span class="capsule">Jenkins</span>
-									<span class="capsule">DataDog</span>
-									<span class="capsule">Github</span>
+						</div>
+						<div class="nwala sub">
+							<div class="h2 neu"><span class="capsule"></span> Returns portal for PayPal customers</div>
+							<div class="stack">
+								<span class="capsule">Reactjs</span>
+								<span class="capsule">Nodejs</span>
+								<span class="capsule">Expressjs / Krakenjs</span>
+								<span class="capsule">Dustjs</span>
+								<span class="capsule">Less</span>
+								<span class="capsule">Grunt</span>
+								<span class="capsule">Github</span>
+							</div>
+							<ul>
+								<div class="li">
+									Writing middleware REST APIs that calls the core backend microservices
 								</div>
-								<ul>
-									<div class="li">
-										Resposibile for end to end maintainence of an application in deprication phase.
-									</div>
-
-									<div class="li">
-										Migrating Angularjs codebase to a TDD React codebase.
-									</div>
-
-									<div class="li">
-										Transforming Play based MVC backend to Rest
-									</div>
-
-								</ul>
-								<div>
-									<span class="neu keyc">Key contribution :-</span><br />
-									<div class="keyci">
-										<i>Developed client-side error monitoring system and Dashboard using DataDog</i>
-									</div>
+								<div class="li">
+									Creating new UI features with React
+								</div>
+							</ul>
+						</div>
+						<div class="nwala sub">
+							<div class="h2 neu"> <span class="capsule"></span> Dashboard for creating and managing rich Email
+								campaigns</div>
+							<div class="stack">
+								<span class="capsule">Reactjs</span>
+								<span class="capsule">StyledComponents</span>
+								<span class="capsule">Angularjs</span>
+								<span class="capsule">Nodejs</span>
+								<span class="capsule">Scala</span>
+								<span class="capsule">PlayFramework</span>
+								<span class="capsule">Slick</span>
+								<span class="capsule">Postgres</span>
+								<!-- <span class="capsule">Docker</span>
+								<span class="capsule">Kubernetes</span> -->
+								<span class="capsule">Jenkins</span>
+								<span class="capsule">DataDog</span>
+								<span class="capsule">Sumo Logic</span>
+								<span class="capsule">Storybook</span>
+								<span class="capsule">Github</span>
+							</div>
+							<ul>
+								<div class="li">
+									Migrating Angularjs codebase to a TDD React codebase and Play based MVC backend to
+									REST
+								</div>
+								<div class="li">
+									Resposibile for end to end maintainence of an application in deprication phase.
+								</div>
+							</ul>
+							<div>
+								<span class="neu keyc">Key contribution :-</span><br />
+								<div class="keyci">
+									<i>Developed client-side error monitoring system and Dashboard using DataDog</i>
 								</div>
 							</div>
 						</div>
-						<div class="card-body neu" style="padding-bottom: 10px;">
-							<div class="rightwala">
-								<div class="h3">
-									Software Engineer @ Senseforth AI Research Pvt Ltd
-									<strong>(4.6 years)</strong>
-								</div>
+					</div>
+					<div class="card-body neu">
+						<div class="rightwala">
+							<div class="h3">
+								Software Engineer @ Senseforth AI Research Pvt Ltd
+								<strong>(4.6 years)</strong>
 							</div>
-							<div class="nwala">
-								<div class="stack">
-									<span class="capsule">Reactjs</span>
-									<span class="capsule">Angularjs</span>
-									<span class="capsule">Nodejs</span>
-									<span class="capsule">Java</span>
-									<span class="capsule">J2EE</span>
-									<span class="capsule">MySql</span>
-									<span class="capsule">Docker</span>
-								</div>
-								<ul>
-									<div class="li">
-										Building a very configurable and extensible framework for creating Chat interfaces.
-									</div>
-
-									<div class="li">
-										Intermittently contributing to the design, architecture and 
-                                        implementation of backend services. 
-									</div>
-
-									<div class="li">
-                                        Creating complete FrontEnd development pipeline across the
-                                        range of products
-                                    </div>
-
-									<div class="li">
-										Writing modern testable but still backwards compatible
-										Browser side code with latest of the Web
-									</div>
-
-									<div class="li">
-										Moving MVPs, built for POCs to a TDD based codebase
-									</div>
-								</ul>
+						</div>
+						<div class="nwala sub">
+							<div class="stack">
+								<span class="capsule">Reactjs</span>
+								<span class="capsule">StyledComponents</span>
+								<span class="capsule">PostCSS</span>
+								<span class="capsule">Webpack</span>
+								<span class="capsule">Angularjs</span>
+								<span class="capsule">Nodejs</span>
+								<span class="capsule">Java</span>
+								<span class="capsule">J2EE</span>
+								<span class="capsule">MySql</span>
+								<span class="capsule">Docker</span>
 							</div>
-							<!-- <div style="margin-left: 20px; padding: 0 5px 0 0;">
+							<ul>
+								<div class="li">
+									Building a very configurable and extensible framework for creating Chat interfaces.
+								</div>
+
+								<div class="li">
+									Contributing to the design, architecture and
+									intermittently implementation of backend services.
+								</div>
+
+								<div class="li">
+									Managing and leading the frontend initiatves in the company
+								</div>
+
+								<div class="li">
+									Worked in proprietary platform for building multichannel Bots
+								</div>
+							</ul>
+						</div>
+						<!-- <div style="margin-left: 20px; padding: 0 5px 0 0;">
                     <strong>Key Achievements:</strong>
                     <div>
                         Reduced the response time of very crucial chat api by factor of 1.5 by lazyly batching database writes with the help of a queue.
                     </div>
                 </div> -->
-						</div>
 					</div>
-					<div class="">
-						<div class="main-header neu">Open Source Contributions</div>
-						<ul class="card-body neu" style="padding-top: 10px; ">
+				</div>
+				<div class="">
+					<div class="main-header neu">Open Source Contributions</div>
+					<ul class="card-body neu">
+						<div class="nwala sub">
 							<li>
-								<b>PostCSS-inline-svg</b> <br />
+								<b>PostCSS-inline-svg</b>
 								<a target="_blank"
 									href="https://github.com/TrySound/postcss-inline-svg/commits?author=iankit3">
 									TrySound/postcss-inline-svg </a><br />
 								<span>
-                                    PostCSS plugin to reference an SVG file and control its
-                                    attributes with CSS syntax.
-                                </span>
+									PostCSS plugin to reference an SVG file and control its
+									attributes with CSS syntax.
+								</span>
 							</li>
 							<br />
 							<li>
-								<b>Mozilla Treeherder</b> <br />
+								<b>Mozilla Treeherder</b>
 								<a target="_blank"
 									href="https://github.com/mozilla/treeherder/commits?author=iankit3">mozilla/treeherder</a><br />
 								<span>A system for managing CI data for Mozilla projects.</span>
@@ -604,12 +646,13 @@
 							<hr />
 							<h3 style="margin:0.2em 0;font-weight:normal">More about me :</h3>
 							<strong>
-                                <a target="_blank" href="https://github.com/iankit3">
-                                https://iankit3.github.io/aboutme/
-                                </a>
-                            </strong>
-						</ul>
-					</div>
+								<a target="_blank" href="https://iankit3.github.io/">
+									https://iankit3.github.io/
+								</a>
+							</strong>
+						</div>
+					</ul>
+				</div>
 				<!-- </div> -->
 			</div>
 		</div>

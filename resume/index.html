@@ -37,8 +37,8 @@
 			--blue-light: rgb(153 168 197);
 			--blue-bright: rgb(87, 144, 254);
 
-			--thememain: var(--lgreen);
-			--themelight: var(--lgreen-light);
+			--thememain: transparent; /*var(--lgreen);*/
+			--themelight: transparent;/*var(--lgreen-light);*/
 			--themebright: var(--lgreen-bright);
 
 			--sec-color: rgb(239, 238, 238);
@@ -98,21 +98,20 @@
 			background: var(--sec-color);
 			/* background: var(--thememain); */
 			box-sizing: border-box;
+			border-bottom: 1px solid;
 		}
 
 		.main {
 			display: flex;
-			margin-top: 10px;
 			overflow: hidden;
 			width: 100%;
 			/* height: calc(1200px - 160px); */
-			height: 100%;
+			/* height: 100%; */
 		}
 
 		.sidebar {
-			/* margin-left: 10px; */
-			margin-top: 1px;
 			flex: 1;
+			padding: 5px 0 0 0;
 		}
 
 		.sidebar img {
@@ -120,19 +119,20 @@
 		}
 
 		.rest {
-			margin-left: 5px;
+			/* margin-left: 5px; */
 			overflow: hidden;
-			padding: 0 5px;
+			padding: 5px 0 0 0;
 			flex: 3;
+			border-left: 1px solid;
 		}
 
 		.main-header {
 			background: var(--thememain);
-			font-size: 1.8em;
+			font-size: 1.5rem;
 			font-weight: 600;
 			padding: 2px 1em;
-			border-radius: 2px;
-			/* color: #eee; */
+			/* border-radius: 2px; */
+			border-bottom: 1px solid;
 		}
 
 		.os {
@@ -175,15 +175,16 @@
 		}
 
 		.h3 strong {
-			color: var(--thememain);
+			/* color: var(--thememain); */
+			color: #fff;
 		}
 
 		.sideheader {
 			background: var(--thememain);
-			font-size: 1.8em;
+			font-size: 1.5rem;
 			font-weight: 600;
 			padding: 2px;
-			border-radius: 2px;
+			border-bottom: 1px solid;
 		}
 
 		.sideheader img {
@@ -203,6 +204,7 @@
 
 		.side-head p {
 			margin: 0.4em 0;
+			line-height: 1.2;
 		}
 
 		.side-head.neu {
@@ -226,10 +228,11 @@
 
 		.h2 {
 			margin-bottom: 8px;
-			background: #222;
+			/* background: #222; */
 			padding: 2px 10px;
-			font-size: 1em;
-			color: #eee;
+			font-size: 1.1em;
+			color: #222;
+			font-weight: 400;
 		}
 
 		.h3 {
@@ -253,11 +256,11 @@
 
 		.exp.neu,
 		.side-head .h3.neu {
-			box-shadow: -2px -2px 2px 0 #eee, 4px 4px 8px 0 rgba(34, 34, 34, 0.7);
+			/* box-shadow: -2px -2px 2px 0 #eee, 4px 4px 8px 0 rgba(34, 34, 34, 0.7); */
 		}
 
 		.neu {
-			box-shadow: -4px -4px 8px 0 #eee, 4px 4px 12px 0 rgba(34, 34, 34, 0.7);
+			/* box-shadow: -4px -4px 8px 0 #eee, 4px 4px 12px 0 rgba(34, 34, 34, 0.7); */
 		}
 
 		.exp>span:first-child {
@@ -283,7 +286,7 @@
 			border-radius: 2px;
 			width: 98%;
 			overflow: hidden;
-			margin: 0.5% 0.5% 0 0.5%;
+			margin: 2px;
 			box-shadow: 4px -4px 8px 0 #eee, 0px 0px 12px 0 rgba(34, 30, 34, 0.76);
 		}
 
@@ -301,10 +304,9 @@
 			margin: 0 4px;
 		}
 
-		.nwala>ul {
+		.nwala > ul {
 			padding-left: 20px;
-			margin-top: 5px;
-			margin-left: 20px;
+			margin: 5px 0 10px 20px;
 		}
 
 		.nwala .li {
@@ -315,7 +317,7 @@
 		}
 
 		.nwala.sub {
-			margin-bottom: 10px;
+			margin-bottom: 0;
 			padding: 0 4px;
 			padding-bottom: 5px;
 		}
@@ -327,14 +329,6 @@
 
 		.nwala .li {
 			font-size: 0.85em;
-		}
-
-		.img {
-			width: 58%;
-			padding-left: 5em;
-			padding-top: 30px;
-			padding-bottom: 30px;
-			position: relative;
 		}
 
 		[class^="flaticon-"]::before,
@@ -349,11 +343,8 @@
 		}
 
 		.card-body {
-			font-size: 1rem;
 			margin-top: 10px;
-			display: block;
-			/* padding-bottom: 20px; */
-			/* background: var(--sec-background); */
+			margin-left: 1px;
 			background: var(--sec-color);
 		}
 
@@ -402,11 +393,9 @@
 			body {
 				font-size: 12px;
 			}
-
-			.img {
-				padding-left: 20px;
-				width: 80% !important;
-				height: 53px !important;
+			.full{
+				height: 100vh;
+				overflow: hidden;
 			}
 		}
 	</style>
@@ -423,7 +412,7 @@
 		<div class="main neu">
 			<div class="sidebar">
 				<div class="each-card">
-					<div class="sideheader neu">
+					<div class="sideheader neu main-header">
 						<i class="flaticon-social"></i> <span>Profile</span>
 					</div>
 					<div class="side-head neu">
@@ -456,7 +445,7 @@
 					</div>
 				</div>
 				<div class="each-card">
-					<div class="sideheader neu">
+					<div class="sideheader neu main-header">
 						<i class="flaticon-black-settings-button"></i><span> Expertise</span>
 					</div>
 					<div class="side-head neu">
@@ -488,7 +477,7 @@
 				</div>
 
 				<div class="each-card">
-					<div class="sideheader neu">
+					<div class="sideheader neu main-header">
 						<i class="flaticon-education"></i><span> Education</span>
 					</div>
 					<div class="side-head neu">
@@ -514,7 +503,7 @@
 						<div class="rightwala">
 							<div class="h3">
 								Engineer @ PayPal (Contingent Worker)
-								<strong>(0.8 years)</strong>
+								<strong class="capsule">(~1 years)</strong>
 							</div>
 						</div>
 						<div class="nwala sub">
@@ -523,9 +512,7 @@
 								<span class="capsule">Reactjs</span>
 								<span class="capsule">Nodejs</span>
 								<span class="capsule">Expressjs / Krakenjs</span>
-								<span class="capsule">Dustjs</span>
 								<span class="capsule">Less</span>
-								<span class="capsule">Grunt</span>
 								<span class="capsule">Github</span>
 							</div>
 							<ul>
@@ -533,13 +520,12 @@
 									Writing middleware REST APIs that calls the core backend microservices
 								</div>
 								<div class="li">
-									Creating new UI features with React
+									Creating new UI features using React
 								</div>
 							</ul>
 						</div>
 						<div class="nwala sub">
-							<div class="h2 neu"> <span class="capsule"></span> Dashboard for creating and managing rich Email
-								campaigns</div>
+							<div class="h2 neu"> <span class="capsule"></span> Dashboard for creating rich email campaigns</div>
 							<div class="stack">
 								<span class="capsule">Reactjs</span>
 								<span class="capsule">StyledComponents</span>
@@ -547,15 +533,11 @@
 								<span class="capsule">Nodejs</span>
 								<span class="capsule">Scala</span>
 								<span class="capsule">PlayFramework</span>
-								<span class="capsule">Slick</span>
 								<span class="capsule">Postgres</span>
 								<!-- <span class="capsule">Docker</span>
 								<span class="capsule">Kubernetes</span> -->
-								<span class="capsule">Jenkins</span>
-								<span class="capsule">DataDog</span>
-								<span class="capsule">Sumo Logic</span>
 								<span class="capsule">Storybook</span>
-								<span class="capsule">Github</span>
+								
 							</div>
 							<ul>
 								<div class="li">
@@ -578,7 +560,7 @@
 						<div class="rightwala">
 							<div class="h3">
 								Software Engineer @ Senseforth AI Research Pvt Ltd
-								<strong>(4.6 years)</strong>
+								<strong class="capsule">(4.6 years)</strong>
 							</div>
 						</div>
 						<div class="nwala sub">

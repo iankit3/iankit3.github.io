@@ -24,7 +24,7 @@
 
 			--lbgreen: rgb(127, 210, 202);
 			--lbgreen-light: rgba(127, 210, 202, 0.45);
-			
+
 			--bred: #e91e63;
 			--bred-light: rgba(234, 114, 155, 0.76);
 
@@ -37,8 +37,10 @@
 			--blue-light: rgb(153 168 197);
 			--blue-bright: rgb(87, 144, 254);
 
-			--thememain: transparent; /*var(--lgreen);*/
-			--themelight: transparent;/*var(--lgreen-light);*/
+			--thememain: transparent;
+			/*var(--lgreen);*/
+			--themelight: transparent;
+			/*var(--lgreen-light);*/
 			--themebright: var(--lgreen-bright);
 
 			--sec-color: rgb(239, 238, 238);
@@ -94,7 +96,7 @@
 
 		.header {
 			width: 100%;
-			height: 110px;
+			height: 90px;
 			background: var(--sec-color);
 			/* background: var(--thememain); */
 			box-sizing: border-box;
@@ -121,8 +123,8 @@
 		.rest {
 			/* margin-left: 5px; */
 			overflow: hidden;
-			padding: 5px 0 0 0;
-			flex: 3;
+			padding: 0;
+			flex: 4;
 			border-left: 1px solid;
 		}
 
@@ -148,10 +150,10 @@
 			padding-left: 5%;
 		}
 
-		.header-right>h1 {
+		.header-right > h1 {
 			font-size: 3.5em;
 			font-weight: 600;
-			padding-top: 0.4em;
+			padding-top: 0em;
 			margin-top: 0;
 		}
 
@@ -243,15 +245,15 @@
 		.side-head .h3.exp {
 			background: lightgrey;
 			margin-bottom: 0.8em;
-			padding: 0.5em 1em;
-			border-radius: 2px;
+			padding: 0.5em;
+			border-radius: 5px;
 
-			display: flex;
+			/* display: flex;
 			align-items: center;
-			justify-content: space-between;
-
+			justify-content: space-between; */
 			box-sizing: border-box;
-			width: 100%;
+			/* width: 100%; */
+			width: auto;
 		}
 
 		.exp.neu,
@@ -304,7 +306,7 @@
 			margin: 0 4px;
 		}
 
-		.nwala > ul {
+		.nwala>ul {
 			padding-left: 20px;
 			margin: 5px 0 10px 20px;
 		}
@@ -381,9 +383,9 @@
 			margin-top: 5px;
 		}
 
-		.subscript{
+		.subscript {
 			font-size: 0.4em;
-			font-weight:100;
+			font-weight: 100;
 			vertical-align: middle;
 			border-radius: 4px;
 			margin-left: 5px;
@@ -393,7 +395,8 @@
 			body {
 				font-size: 12px;
 			}
-			.full{
+
+			.full {
 				height: 100vh;
 				overflow: hidden;
 			}
@@ -405,8 +408,8 @@
 	<div class="full">
 		<div class="header neu">
 			<div class="header-right">
-				<h1>Ankit Kumar <span class="capsule subscript">5.6 years</span></h1>
-				<p>Senior Software Engineer, Altimetrik India Pvt Ltd.</p>
+				<h1>Ankit Kumar</h1>
+				<p>SDE-3, Nutanix Technologies India Pvt Ltd</p>
 			</div>
 		</div>
 		<div class="main neu">
@@ -427,14 +430,13 @@
 						<div class="h3 neu">
 							<p>LinkedIn</p>
 							<p>
-								<a href="https://www.linkedin.com/in/iankit3"
-									target="_blank">linkedin.com/in/iankit3
+								<a href="https://www.linkedin.com/in/iankit3" target="_blank">linkedin.com/in/iankit3
 								</a>
 							</p>
 						</div>
 						<div class="h3 neu">
 							<p>Address</p>
-							<p>HSR Layout, Central Silk Board, Bangalore</p>
+							<p>HSR, Bangalore</p>
 						</div>
 						<div class="h3 neu">
 							<p>Github</p>
@@ -446,33 +448,21 @@
 				</div>
 				<div class="each-card">
 					<div class="sideheader neu main-header">
-						<i class="flaticon-black-settings-button"></i><span> Expertise</span>
+						<i class="flaticon-black-settings-button"></i><span>Skills</span>
 					</div>
 					<div class="side-head neu">
-						<div class="h3 exp neu">
-							<span>JavaScript </span> <span class="score">9</span>
-						</div>
-						<div class="h3 exp neu">
-							<span>Reactjs </span> <span class="score">9</span>
-						</div>
-						<div class="h3 exp neu">
-							<span>NodeJs </span> <span class="score">8</span>
-						</div>
-						<div class="h3 exp neu">
-							<span>Java/J2EE </span> <span class="score">5</span>
-						</div>
-						<div class="h3 exp neu">
-							<span>Scala </span> <span class="score">3</span>
-						</div>
-						<div class="h3 exp neu">
-							<span>SQL </span> <span class="score">6</span>
-						</div>
-						<div class="h3 exp neu">
-							<span>C/C++ </span> <span class="score">3</span>
-						</div>
-						<div class="h3 exp neu">
-							<span>Rustlang </span> <span class="score">1</span>
-						</div>
+						<span class="h3 exp neu">Java</span>
+						<span class="h3 exp new">J2EE</span>
+						<span class="h3 exp new">Spring</span>
+						<span class="h3 exp neu">Drools</span>
+						<span class="h3 exp neu">NodeJs</span>
+						<span class="h3 exp neu">Scala</span>
+						<span class="h3 exp neu">JavaScript</span>
+						<span class="h3 exp neu">Reactjs</span>
+						<span class="h3 exp neu">Nodejs</span>
+						<span class="h3 exp neu">Webpack</span>
+						<span class="h3 exp neu">StyledComponents</span>
+						<span class="h3 exp neu">Rustlang</span>
 					</div>
 				</div>
 
@@ -497,24 +487,60 @@
 			</div>
 			<div class="rest">
 				<!-- <div class="os"> -->
-				<div class="main-header neu">Experience</div>
+				<div class="main-header neu">Experience  <span class="capsule" style="padding: 5px 10px; margin: 0; border-radius: 5px;">7 years</span></div>
 				<div class="main-body">
 					<div class="card-body neu">
 						<div class="rightwala">
 							<div class="h3">
+								Member of Technical Staff - 3 @ Nutanix 
+								<strong class="capsule">(1.7 years)</strong>
+							</div>
+						</div>
+						<div class="nwala sub">
+							<div class="h2 neu"><span class="capsule"></span> Configure, Price, Quote (CPQ) Suite </div>
+							<!-- <div class="stack">
+								<span class="capsule">Drools</span>
+								<span class="capsule">Spring</span>
+								<span class="capsule">Nodejs</span>
+								<span class="capsule">GraphQL</span>
+								<span class="capsule">Kafka</span>
+								<span class="capsule">Redis</span>
+								<span class="capsule">Postgres</span>
+								<span class="capsule">Less</span>
+								<span class="capsule">MongoDB</span>
+							</div> -->
+							<ul>
+								<div class="li">
+									Created Codemods using JSCodeShift for automatic code migration that migrates the internal components library to the latest version. 
+								</div>
+								<div class="li">
+									Designed and implemented the features of a Salesforce addon software to eventually retire it.
+								</div>
+								<div class="li">
+									Worked on implementing basic products recommendations.
+								</div>
+								<div class="li">
+									Created mocks for a downstream services to test applications flows.
+								</div>
+							</ul>
+						</div>
+					</div>
+					<div class="card-body neu">
+						<div class="rightwala">
+							<div class="h3">
 								Engineer @ PayPal (Contingent Worker)
-								<strong class="capsule">(~1 years)</strong>
+								<strong class="capsule">(1 years)</strong>
 							</div>
 						</div>
 						<div class="nwala sub">
 							<div class="h2 neu"><span class="capsule"></span> Returns portal for PayPal customers</div>
-							<div class="stack">
+							<!-- <div class="stack">
 								<span class="capsule">Reactjs</span>
 								<span class="capsule">Nodejs</span>
 								<span class="capsule">Expressjs / Krakenjs</span>
 								<span class="capsule">Less</span>
 								<span class="capsule">Github</span>
-							</div>
+							</div> -->
 							<ul>
 								<div class="li">
 									Writing middleware REST APIs that calls the core backend microservices
@@ -525,8 +551,8 @@
 							</ul>
 						</div>
 						<div class="nwala sub">
-							<div class="h2 neu"> <span class="capsule"></span> Dashboard for creating rich email campaigns</div>
-							<div class="stack">
+							<div class="h2 neu"> <span class="capsule"></span> Advertising platform for creating campaigns</div>
+							<!-- <div class="stack">
 								<span class="capsule">Reactjs</span>
 								<span class="capsule">StyledComponents</span>
 								<span class="capsule">Angularjs</span>
@@ -534,18 +560,15 @@
 								<span class="capsule">Scala</span>
 								<span class="capsule">PlayFramework</span>
 								<span class="capsule">Postgres</span>
-								<!-- <span class="capsule">Docker</span>
-								<span class="capsule">Kubernetes</span> -->
 								<span class="capsule">Storybook</span>
-								
-							</div>
+							</div> -->
 							<ul>
 								<div class="li">
 									Migrating Angularjs codebase to a TDD React codebase and Play based MVC backend to
 									REST
 								</div>
 								<div class="li">
-									Resposibile for end to end maintainence of an application in deprication phase.
+									Responsible for end to end maintenence of the application in the deprecation phase.
 								</div>
 							</ul>
 							<div>
@@ -559,12 +582,12 @@
 					<div class="card-body neu">
 						<div class="rightwala">
 							<div class="h3">
-								Software Engineer @ Senseforth AI Research Pvt Ltd
+								Technical Lead @ Senseforth AI Research Pvt Ltd
 								<strong class="capsule">(4.6 years)</strong>
 							</div>
 						</div>
 						<div class="nwala sub">
-							<div class="stack">
+							<!-- <div class="stack">
 								<span class="capsule">Reactjs</span>
 								<span class="capsule">StyledComponents</span>
 								<span class="capsule">PostCSS</span>
@@ -575,19 +598,19 @@
 								<span class="capsule">J2EE</span>
 								<span class="capsule">MySql</span>
 								<span class="capsule">Docker</span>
-							</div>
+							</div> -->
 							<ul>
 								<div class="li">
 									Building a very configurable and extensible framework for creating Chat interfaces.
 								</div>
 
 								<div class="li">
-									Contributing to the design, architecture and
-									intermittently implementation of backend services.
+									Contributing to the design, architecture and 
+									implementation of backend services.
 								</div>
 
 								<div class="li">
-									Managing and leading the frontend initiatves in the company
+									Managing and leading the frontend initiatives in the company
 								</div>
 
 								<div class="li">
@@ -613,8 +636,7 @@
 									href="https://github.com/TrySound/postcss-inline-svg/commits?author=iankit3">
 									TrySound/postcss-inline-svg </a><br />
 								<span>
-									PostCSS plugin to reference an SVG file and control its
-									attributes with CSS syntax.
+									PostCSS plugin to control its attributes with CSS syntax.
 								</span>
 							</li>
 							<br />
@@ -626,12 +648,12 @@
 							</li>
 							<!-- <br /> -->
 							<hr />
-							<h3 style="margin:0.2em 0;font-weight:normal">More about me :</h3>
+							<!-- <h3 style="margin:0.2em 0;font-weight:normal">More about me :</h3>
 							<strong>
 								<a target="_blank" href="https://iankit3.github.io/">
 									https://iankit3.github.io/
 								</a>
-							</strong>
+							</strong> -->
 						</div>
 					</ul>
 				</div>

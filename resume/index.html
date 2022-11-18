@@ -150,7 +150,7 @@
 			padding-left: 5%;
 		}
 
-		.header-right > h1 {
+		.header-right>h1 {
 			font-size: 3.5em;
 			font-weight: 600;
 			padding-top: 0em;
@@ -393,7 +393,7 @@
 
 		@media print {
 			body {
-				font-size: 12px;
+				font-size: 11px;
 			}
 
 			.full {
@@ -409,10 +409,10 @@
 		<div class="header neu">
 			<div class="header-right">
 				<h1>Ankit Kumar</h1>
-				<p>SDE-3, Nutanix Technologies India Pvt Ltd</p>
+				<p role="heading">SDE-3, Nutanix Technologies India Pvt Ltd</p>
 			</div>
 		</div>
-		<div class="main neu">
+		<div class="main neu" role="main">
 			<div class="sidebar">
 				<div class="each-card">
 					<div class="sideheader neu main-header">
@@ -436,7 +436,7 @@
 						</div>
 						<div class="h3 neu">
 							<p>Address</p>
-							<p>HSR, Bangalore</p>
+							<p>HSR, Bangalore, India</p>
 						</div>
 						<div class="h3 neu">
 							<p>Github</p>
@@ -451,15 +451,13 @@
 						<i class="flaticon-black-settings-button"></i><span>Skills</span>
 					</div>
 					<div class="side-head neu">
-						<span class="h3 exp neu">Java</span>
-						<span class="h3 exp new">J2EE</span>
-						<span class="h3 exp new">Spring</span>
-						<span class="h3 exp neu">Drools</span>
-						<span class="h3 exp neu">NodeJs</span>
-						<span class="h3 exp neu">Scala</span>
 						<span class="h3 exp neu">JavaScript</span>
 						<span class="h3 exp neu">Reactjs</span>
 						<span class="h3 exp neu">Nodejs</span>
+						<span class="h3 exp neu">Java</span>
+						<span class="h3 exp new">Spring Boot</span>
+						<span class="h3 exp neu">Drools</span>
+						<span class="h3 exp neu">Scala</span>
 						<span class="h3 exp neu">Webpack</span>
 						<span class="h3 exp neu">StyledComponents</span>
 						<span class="h3 exp neu">Rustlang</span>
@@ -487,13 +485,14 @@
 			</div>
 			<div class="rest">
 				<!-- <div class="os"> -->
-				<div class="main-header neu">Experience  <span class="capsule" style="padding: 5px 10px; margin: 0; border-radius: 5px;">7 years</span></div>
+				<div class="main-header neu">Experience <span class="capsule"
+						style="padding: 5px 10px; margin: 0; border-radius: 5px;">7.5 years</span></div>
 				<div class="main-body">
 					<div class="card-body neu">
 						<div class="rightwala">
-							<div class="h3">
-								Member of Technical Staff - 3 @ Nutanix 
-								<strong class="capsule">(1.7 years)</strong>
+							<div class="h3" role="heading">
+								Member of Technical Staff - 3 @ Nutanix
+								<strong class="capsule">(1.9 years)</strong>
 							</div>
 						</div>
 						<div class="nwala sub">
@@ -503,23 +502,28 @@
 								<span class="capsule">Spring</span>
 								<span class="capsule">Nodejs</span>
 								<span class="capsule">GraphQL</span>
-								<span class="capsule">Kafka</span>
 								<span class="capsule">Redis</span>
+								<span class="capsule">Kafka</span>
 								<span class="capsule">Postgres</span>
 								<span class="capsule">Less</span>
 								<span class="capsule">MongoDB</span>
 							</div> -->
-							<ul>
-								<div class="li">
-									Created Codemods using JSCodeShift for automatic code migration that migrates the internal components library to the latest version. 
+							<ul role="list">
+								<div class="li" role="listitem">
+									Worked on building Configure, Price, Quote (CPQ) tool for quoting Nutanix Products
 								</div>
-								<div class="li">
-									Designed and implemented the features of a Salesforce addon software to eventually retire it.
+								<div class="li" role="listitem">
+									Created Codemods using JSCodeShift for automatic code migration that migrates the
+									internal components library to the latest version.
 								</div>
-								<div class="li">
-									Worked on implementing basic products recommendations.
+								<div class="li" role="listitem">
+									Designed and implemented the features of a Salesforce addon software to eventually
+									retire it
 								</div>
-								<div class="li">
+								<div class="li" role="listitem">
+									Worked on implementing basic products recommendations
+								</div>
+								<div class="li" role="listitem">
 									Created mocks for a downstream services to test applications flows.
 								</div>
 							</ul>
@@ -527,13 +531,13 @@
 					</div>
 					<div class="card-body neu">
 						<div class="rightwala">
-							<div class="h3">
+							<div class="h3" role="heading">
 								Engineer @ PayPal (Contingent Worker)
 								<strong class="capsule">(1 years)</strong>
 							</div>
 						</div>
 						<div class="nwala sub">
-							<div class="h2 neu"><span class="capsule"></span> Returns portal for PayPal customers</div>
+							<!-- <div class="h2 neu"><span class="capsule"></span> Returns portal for PayPal customers</div> -->
 							<!-- <div class="stack">
 								<span class="capsule">Reactjs</span>
 								<span class="capsule">Nodejs</span>
@@ -541,17 +545,18 @@
 								<span class="capsule">Less</span>
 								<span class="capsule">Github</span>
 							</div> -->
-							<ul>
-								<div class="li">
+							<ul role="list">
+								<div class="li" role="listitem">
+									Contributed to the UI enhancements of Returns portal
+								</div>
+								<div class="li" role="listitem">
 									Writing middleware REST APIs that calls the core backend microservices
 								</div>
-								<div class="li">
-									Creating new UI features using React
-								</div>
 							</ul>
-						</div>
-						<div class="nwala sub">
-							<div class="h2 neu"> <span class="capsule"></span> Advertising platform for creating campaigns</div>
+						<!-- </div>
+						<div class="nwala sub"> -->
+							<!-- <div class="h2 neu"> <span class="capsule"></span> Advertising platform for creating
+								campaigns</div> -->
 							<!-- <div class="stack">
 								<span class="capsule">Reactjs</span>
 								<span class="capsule">StyledComponents</span>
@@ -562,13 +567,14 @@
 								<span class="capsule">Postgres</span>
 								<span class="capsule">Storybook</span>
 							</div> -->
-							<ul>
-								<div class="li">
+							<ul role="list">
+								<div class="li" role="listitem">
 									Migrating Angularjs codebase to a TDD React codebase and Play based MVC backend to
 									REST
 								</div>
-								<div class="li">
-									Responsible for end to end maintenence of the application in the deprecation phase.
+								<div class="li" role="listitem">
+									Worked on maintining Advertising platform and adding new features to eventually
+									depricate it
 								</div>
 							</ul>
 							<div>
@@ -581,7 +587,7 @@
 					</div>
 					<div class="card-body neu">
 						<div class="rightwala">
-							<div class="h3">
+							<div class="h3" role="heading">
 								Technical Lead @ Senseforth AI Research Pvt Ltd
 								<strong class="capsule">(4.6 years)</strong>
 							</div>
@@ -599,22 +605,29 @@
 								<span class="capsule">MySql</span>
 								<span class="capsule">Docker</span>
 							</div> -->
-							<ul>
-								<div class="li">
-									Building a very configurable and extensible framework for creating Chat interfaces.
+							<ul role="list">
+								<div class="li" role="listitem">
+									Managed and led the frontend initiatives across the company.
 								</div>
 
-								<div class="li">
-									Contributing to the design, architecture and 
-									implementation of backend services.
+								<div class="li" role="listitem">
+									Worked on creating plugable widgets with small foorprint and full control.
 								</div>
 
-								<div class="li">
-									Managing and leading the frontend initiatives in the company
+								<div class="li" role="listitem">
+									Migrated the core suite of products through multiple techonolgies as the web
+									evolved.
 								</div>
 
-								<div class="li">
-									Worked in proprietary platform for building multichannel Bots
+								<div class="li" role="listitem">
+									Worked on building a SaaS proprietary platform for building multichannel Bots, used
+									by large Enterprises,
+								</div>
+								<div class="li" role="listitem">
+									Contributing to the design, architecture and implementation of backend services.
+								</div>
+								<div class="li" role="listitem">
+									Worked of document parsing and categoring software.
 								</div>
 							</ul>
 						</div>
@@ -628,7 +641,7 @@
 				</div>
 				<div class="">
 					<div class="main-header neu">Open Source Contributions</div>
-					<ul class="card-body neu">
+					<ul class="card-body neu" style="padding-bottom: 0;">
 						<div class="nwala sub">
 							<li>
 								<b>PostCSS-inline-svg</b>

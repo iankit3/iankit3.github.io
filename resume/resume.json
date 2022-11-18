@@ -1,0 +1,124 @@
+{
+    "selectedTemplate": 8,
+    "headings": {
+      "skills": "",
+      "projects": "",
+      "awards": ""
+    },
+    "basics": {
+      "name": "Ankit Kumar",
+      "email": "a4ankit@outlook.com",
+      "website": "iankit3.github.io/",
+      "location": {
+        "address": "Bangalore, India"
+      },
+      "phone": "+91-9743997635"
+    },
+    "education": [
+      {
+        "institution": "West Bengal University of Technology",
+        "location": "Kolkata",
+        "area": "Computer Science",
+        "studyType": "B.Tech",
+        "startDate": "April 2011",
+        "endDate": "May 2015"
+      }
+    ],
+    "work": [
+      {
+        "highlights": [
+          "Worked on building Configure, Price, Quote (CPQ) tool for quoting Nutanix Products",
+          "Designed and implemented the features of a Salesforce addon software to eventually retire it",
+          "Worked on implementing basic products recommendations"
+        ],
+        "company": "Nutanix ",
+        "position": "Member of Technical Staff -3",
+        "location": "Bangalore",
+        "startDate": "April 2021",
+        "endDate": "Present"
+      },
+      {
+        "highlights": [
+          "Contributed to the UI enhancements of Returns portal",
+          "Worked on maintining Advertising platform and adding new features to eventually depricate it",
+          "Developed client-side error monitoring system and Dashboard using DataDog"
+        ],
+        "company": "Paypal",
+        "position": "Software Engineer",
+        "location": "Bangalore",
+        "startDate": "May 2020",
+        "endDate": "April 2021"
+      },
+      {
+        "company": "Senseforth.ai",
+        "position": "Technical Lead",
+        "website": "",
+        "startDate": "Dec 2015",
+        "highlights": [
+          "Managed and led the frontend initiatives across the company",
+          "Worked on creating plugable widgets with small foorprint and full control",
+          "Migrated the core suite of products through multiple techonolgies as the web evolved",
+          "Worked on building proprietary platform for building multichannel Bots, used by large Enterprises",
+          "Contributing to the design, architecture and implementation of backend services."
+        ],
+        "location": "Bangalore",
+        "endDate": "May 2020"
+      }
+    ],
+    "skills": [
+      {
+        "name": "",
+        "level": "",
+        "keywords": [
+          "JavaScript",
+          "Java",
+          "Reactjs",
+          "Nodejs",
+          "GraphQL",
+          "Webpack",
+          "StyledComponents",
+          "Spring Boot",
+          "Mysql",
+          "Postgres",
+          "Mongodb",
+          "Drools",
+          ""
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "PostCSS-inline-svg ",
+        "description": "PostCSS plugin to control its attributes with CSS syntax",
+        "url": "https://github.com/TrySound/postcss-inline-svg/commits?author=iankit3",
+        "keywords": [
+          "Postcss, weebpack, babel"
+        ]
+      },
+      {
+        "keywords": [
+          "React, webpack"
+        ],
+        "name": "Mozilla Treeherder",
+        "description": "A system for managing CI data for Mozilla projects.",
+        "url": "https://github.com/mozilla/treeherder/commits?author=iankit3"
+      }
+    ],
+    "awards": [
+      {
+        "title": "",
+        "date": "",
+        "awarder": "",
+        "summary": ""
+      }
+    ],
+    "sections": [
+      "templates",
+      "profile",
+      "work",
+      "skills",
+      "projects",
+      "education",
+      "awards"
+    ]
+  }

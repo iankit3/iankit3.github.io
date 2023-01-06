@@ -1,5 +1,6 @@
 # Kafka
-- Kafka is a distributed system consisting of servers and clients that communicate via a high-performance TCP network protocol.
+- A distributed, fault tolerant, immutable ledger of logs.
+- consisting of servers and clients that communicate via a high-performance TCP network protocol.
 
 ## Intro
 

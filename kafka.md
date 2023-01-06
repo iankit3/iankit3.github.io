@@ -14,7 +14,9 @@
 ## Concepts
  ### Event
   - An event records somthing happened ( also called record / message)
-  - {key: key, value: value, timestamp: now(), !metadata: optionalMeta}
+  - ```json 
+      {"key": "key", "value": "value", "timestamp": "now()", "!metadata": "optionalMeta"}
+    ```
  ### Producers
  ### Consumers
   - Provides exactly-once and various processing gurantees

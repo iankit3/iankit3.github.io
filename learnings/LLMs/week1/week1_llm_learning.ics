@@ -1,0 +1,107 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//xAI//Grok 3//EN
+BEGIN:VEVENT
+UID:7b9f4c2a-3e1b-4f7c-9a8d-5f6e3c1d2e3f-1
+DTSTART:20250526T190000
+DTEND:20250526T200000
+SUMMARY:Day 1: Intro to Modern NLP and Tokenization
+DESCRIPTION:Learning Goal: Understand the evolution of NLP from GATE to LLMs and master tokenization.\n
+Resources:\n
+- Article: “The Illustrated Word2Vec” by Jay Alammar (online, 30 mins).\n
+- Video: 3Blue1Brown “Neural Networks, Part 1” (YouTube, 20 mins).\n
+- Code: Install `nltk` or `spacy` on your Linux machine (`pip install nltk spacy`, download models).\n
+Expected Outcome: Grasp how LLMs differ from rule-based NLP (e.g., GATE) and tokenize a sentence using Python.\n
+Knowledge Test: Write a Python script to tokenize “I love learning about LLMs” using `nltk` or `spacy`. Check if the output matches expected tokens (e.g., ["I", "love", "learning", "about", "LLMs"]).
+LOCATION:Home/Linux Environment or Google Colab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7b9f4c2a-3e1b-4f7c-9a8d-5f6e3c1d2e3f-2
+DTSTART:20250527T190000
+DTEND:20250527T200000
+SUMMARY:Day 2: Word Embeddings Basics
+DESCRIPTION:Learning Goal: Learn how word embeddings (e.g., Word2Vec) represent words as vectors.\n
+Resources:\n
+- Article: “Word Embeddings: Encoding Lexical Semantics” (Hugging Face docs, 20 mins).\n
+- Video: Stanford CS224N Lecture 1 (YouTube, clips on embeddings, 20 mins).\n
+- Code: Use `gensim` to load pre-trained Word2Vec embeddings (`pip install gensim`).\n
+Expected Outcome: Understand how embeddings capture word meanings and compute similarity between words.\n
+Knowledge Test: Write a Python script to load Word2Vec embeddings and find the cosine similarity between “king” and “queen” using `gensim`. Expected result: High similarity score (e.g., >0.7).
+LOCATION:Home/Linux Environment or Google Colab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7b9f4c2a-3e1b-4f7c-9a8d-5f6e3c1d2e3f-3
+DTSTART:20250528T190000
+DTEND:20250528T200000
+SUMMARY:Day 3: Neural Networks for NLP
+DESCRIPTION:Learning Goal: Understand neural network basics for NLP (e.g., RNNs, LSTMs) and their limitations.\n
+Resources:\n
+- Article: “RNNs and LSTMs” by Christopher Olah (online, 30 mins).\n
+- Video: 3Blue1Brown “Neural Networks, Part 2” (YouTube, 20 mins).\n
+- Code: Explore a simple RNN in PyTorch (`pip install torch`).\n
+Expected Outcome: Know why RNNs/LSTMs were replaced by transformers in LLMs.\n
+Knowledge Test: Explain in 2-3 sentences why transformers outperform RNNs for NLP tasks (hint: parallel processing, long-range dependencies). Submit to me (Grok) for feedback.
+LOCATION:Home/Linux Environment or Google Colab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7b9f4c2a-3e1b-4f7c-9a8d-5f6e3c1d2e3f-4
+DTSTART:20250529T190000
+DTEND:20250529T200000
+SUMMARY:Day 4: Intro to Transformers
+DESCRIPTION:Learning Goal: Grasp the basics of the transformer architecture and attention mechanism.\n
+Resources:\n
+- Article: “The Illustrated Transformer” by Jay Alammar (online, 40 mins).\n
+- Code: Install `transformers` (`pip install transformers`) and tokenize a sentence with BERT.\n
+Expected Outcome: Understand the role of attention in transformers and run a BERT tokenizer.\n
+Knowledge Test: Write a Python script to tokenize “Transformers power modern LLMs” using BERT from `transformers`. Check if token IDs and decoded text match the input.
+LOCATION:Home/Linux Environment or Google Colab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7b9f4c2a-3e1b-4f7c-9a8d-5f6e3c1d2e3f-5
+DTSTART:20250530T190000
+DTEND:20250530T200000
+SUMMARY:Day 5: Hands-On with Pre-trained Models
+DESCRIPTION:Learning Goal: Run a pre-trained BERT model for a simple task (e.g., text classification).\n
+Resources:\n
+- Tutorial: Hugging Face “Getting Started with Transformers” (online, 30 mins).\n
+- Code: Use Google Colab to run a BERT model for sentiment analysis.\n
+Expected Outcome: Successfully run a pre-trained model and understand its inputs/outputs.\n
+Knowledge Test: Classify the sentiment of “I love AI” using a pre-trained BERT model in Colab. Verify the output is positive (e.g., score > 0.5).
+LOCATION:Home/Linux Environment or Google Colab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7b9f4c2a-3e1b-4f7c-9a8d-5f6e3c1d2e3f-6
+DTSTART:20250531T190000
+DTEND:20250531T210000
+SUMMARY:Day 6: Mini-Project - Text Classifier
+DESCRIPTION:Learning Goal: Build a simple text classifier using BERT to solidify Week 1 concepts.\n
+Resources:\n
+- Tutorial: Hugging Face “Fine-Tuning a Pre-trained Model” (online, 1 hour).\n
+- Dataset: IMDB reviews (available in Hugging Face `datasets`).\n
+- Code: Use `transformers` and `datasets` in Colab.\n
+Expected Outcome: A working classifier that predicts sentiment on movie reviews.\n
+Knowledge Test: Train your classifier on a small IMDB dataset and report the accuracy (e.g., >80%) on a test set. Share the code with me for review.
+LOCATION:Home/Linux Environment or Google Colab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7b9f4c2a-3e1b-4f7c-9a8d-5f6e3c1d2e3f-7
+DTSTART:20250601T190000
+DTEND:20250601T210000
+SUMMARY:Day 7: Review and Reflect
+DESCRIPTION:Learning Goal: Consolidate Week 1 knowledge and plan for Week 2.\n
+Resources:\n
+- Review: Revisit “The Illustrated Transformer” (20 mins).\n
+- Code: Debug or improve your Day 6 classifier.\n
+- Reflection: Write a 100-word summary of what you learned about NLP and LLMs.\n
+Expected Outcome: Clear understanding of tokenization, embeddings, and transformers; a functional classifier.\n
+Knowledge Test: Submit your 100-word summary to me and answer a quiz (I’ll provide 5 questions on Week 1 topics, e.g., “What is self-attention?”).
+LOCATION:Home/Linux Environment or Google Colab
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

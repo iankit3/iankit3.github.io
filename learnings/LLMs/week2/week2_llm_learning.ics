@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//xAI//Grok 3//EN
+BEGIN:VEVENT
+UID:20250602T1900@llm_learning
+DTSTART:20250602T190000
+DTEND:20250602T200000
+SUMMARY:Week 2 Day 1: BERT Variants (RoBERTa)
+DESCRIPTION:Explore RoBERTa's improvements over BERT. Read Hugging Face’s BERT blog (20 mins, https://huggingface.co/blog/bert-101), tokenize “LLMs are transforming AI” with BERT and RoBERTa (40 mins, transformers.RobertaTokenizer). Notes: RoBERTa uses dynamic masking, larger data, no next-sentence prediction, boosting performance. Overview: Understand optimizations for better accuracy. Test: Share token IDs. Knowledge Check: Why does RoBERTa outperform BERT? (1–2 sentences). Prep: pip install transformers, bookmark blog.
+LOCATION:Colab or M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:20250603T1900@llm_learning
+DTSTART:20250603T190000
+DTEND:20250603T200000
+SUMMARY:Week 2 Day 2: Attention Variants
+DESCRIPTION:Study multi-head vs. scaled dot-product attention. Read “Efficient Transformers” paper intro (20 mins, https://arxiv.org/abs/2009.06732), visualize BERT attention for “I love AI” (40 mins, exbert in Colab). Notes: Multi-head splits queries; scaled dot-product stabilizes values. Overview: Grasp attention efficiency for scalable models. Test: Share visualization insights. Prep: Bookmark paper, ensure transformers installed.
+LOCATION:Colab
+END:VEVENT
+BEGIN:VEVENT
+UID:20250604T1900@llm_learning
+DTSTART:20250604T190000
+DTEND:20250604T200000
+SUMMARY:Week 2 Day 3: Fine-Tuning Optimization
+DESCRIPTION:Optimize fine-tuning with learning rate schedules, mixed precision on SST-2. Read Hugging Face guide (20 mins, https://huggingface.co/docs/transformers/perf_train_gpu_one), fine-tune DistilBERT (40 mins, datasets.load_dataset('sst2')). Notes: Mixed precision saves memory; schedules improve convergence. Overview: Enhance training efficiency. Test: Share accuracy (>85%). Prep: pip install datasets, enable GPU in Colab.
+LOCATION:Colab
+END:VEVENT
+BEGIN:VEVENT
+UID:20250605T1900@llm_learning
+DTSTART:20250605T190000
+DTEND:20250605T200000
+SUMMARY:Week 2 Day 4: Model Compression
+DESCRIPTION:Apply pruning/quantization for M3 Pro deployment. Read Hugging Face Optimum guide (20 mins, https://huggingface.co/docs/optimum/quantization), quantize Day 3 model (40 mins, optimum.onnxruntime). Notes: Quantization reduces size; pruning cuts weights. Overview: Create deployable models. Test: Share size reduction. Prep: pip install optimum, bookmark guide.
+LOCATION:M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:20250606T1900@llm_learning
+DTSTART:20250606T190000
+DTEND:20250606T200000
+SUMMARY:Week 2 Day 5: Model Deployment
+DESCRIPTION:Deploy model as FastAPI endpoint on M3 Pro. Read FastAPI tutorial (20 mins, https://fastapi.tiangolo.com), deploy Day 4 model (40 mins, fastapi with transformers). Notes: FastAPI integrates Hugging Face for inference. Overview: Build functional APIs. Test: Share API response for “I love AI”. Prep: pip install fastapi uvicorn, bookmark tutorial.
+LOCATION:M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:20250607T1900@llm_learning
+DTSTART:20250607T190000
+DTEND:20250607T210000
+SUMMARY:Week 2 Day 6: Mini-Project - Text Generation
+DESCRIPTION:Fine-tune GPT-2 for movie dialogue generation. Read Hugging Face generation guide (30 mins, https://huggingface.co/docs/transformers/generation_strategies), fine-tune GPT-2 on ~1000 dialogue lines (1 hour), generate text (30 mins). Notes: GPT-2 adapts to custom styles. Overview: Create a text generator. Test: Share dialogue sample. Prep: Curate dataset (e.g., Kaggle), ensure GPU in Colab.
+LOCATION:Colab
+END:VEVENT
+BEGIN:VEVENT
+UID:20250608T1900@llm_learning
+DTSTART:20250608T190000
+DTEND:20250608T210000
+SUMMARY:Week 2 Day 7: Review and Reflect
+DESCRIPTION:Consolidate Week 2 learnings. Revisit “Efficient Transformers” (20 mins, https://arxiv.org/abs/2009.06732), tweak Day 6 GPT-2 (1 hour), write 100-word summary (20 mins), answer 5-question quiz (20 mins). Notes: Reflect on optimization, deployment, generation. Overview: Solidify advanced NLP. Test: Submit summary, quiz answers. Prep: Save Day 6 script, bookmark paper.
+LOCATION:Colab or M3 Pro
+END:VEVENT
+END:VCALENDAR

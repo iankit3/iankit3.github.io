@@ -1,0 +1,195 @@
+% Defining the document class and setting up the page layout
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{noto}
+
+% Setting up fonts last, ensuring compatibility
+\usepackage{noto}
+
+% Title and author information
+\title{Week 1 LLM Learning Plan: Timeline and Details}
+\author{Your Name}
+\date{May 26--June 2, 2025}
+
+\begin{document}
+
+% Generating the title page
+\maketitle
+
+% Starting the introduction section
+\section*{Introduction}
+This document summarizes Week 1 (May 26--June 2, 2025) of an LLM learning plan, detailing daily tasks, timelines, steps, knowledge highlights, reference links, quiz answers, corrections, and improvements. Designed for a full-stack web engineer with Linux expertise, it covers tokenization, embeddings, RNNs, transformers, and fine-tuning, with outputs for GitHub reference.
+
+% Starting the daily timeline section
+\section*{Daily Timeline}
+
+% Day 1
+\subsection*{Day 1: Monday, May 26, 2025, 7:00--8:00 PM IST}
+\textbf{Task}: NLP Basics and Tokenization \\
+\textbf{Intro}: Introduced NLP fundamentals and tokenization as the first step in text processing. \\
+\textbf{Steps}:
+\begin{itemize}
+    \item Tokenized ``I love learning about LLMs'' with NLTK (20 mins).
+    \item Read ``The Illustrated Word2Vec'' by Jay Alammar (20 mins).
+    \item Watched 3Blue1Brown’s ``Neural Networks, Part 1'' (20 mins).
+\end{itemize}
+\textbf{Knowledge Highlights}: Tokenization splits text into words/subwords for numerical processing. Word2Vec captures semantic relationships. Neural networks underpin LLMs. \\
+\textbf{References}: 
+\begin{itemize}
+    \item \href{https://jalammar.github.io/illustrated-word2vec}{The Illustrated Word2Vec}
+    \item \href{https://www.youtube.com/@3blue1brown}{3Blue1Brown Neural Networks}
+\end{itemize}
+\textbf{Output}: Tokenized: \texttt{['I', 'love', 'learning', 'about', 'LLMs']}. \\
+\textbf{Test Question}: How does tokenization relate to word embeddings? \\
+\textbf{Your Answer}: Tokenization helps create the root form of words, used with neighbors for embedding vectors. \\
+\textbf{Correction}: Tokenization splits text into tokens (not always roots; cf. stemming). Embeddings map tokens to vectors based on context. \\
+\textbf{Improvement}: Clarified tokenization’s role vs. stemming. \\
+\textbf{Status}: Complete.
+
+% Day 2
+\subsection*{Day 2: Tuesday, May 27, 2025, 7:00--8:00 PM IST}
+\textbf{Task}: Word Embeddings Basics \\
+\textbf{Intro}: Explored how embeddings encode word meanings as vectors. \\
+\textbf{Steps}:
+\begin{itemize}
+    \item Read Aravind CR’s ``Word Embeddings in NLP'' (20 mins, replaced Hugging Face doc).
+    \item Watched Stanford CS20N Lecture 30 clips (20 mins).
+    \item Computed cosine similarity for ``king'' and ``queen'' with \texttt{gensim} (20 mins).
+\end{itemize}
+\textbf{Knowledge Highlights}: Word2Vec (Skip-gram) uses context; GloVe uses co-occurrence. High similarity reflects shared contexts. \\
+\textbf{References}: 
+\begin{itemize}
+    \item \href{https://medium.com/analytics-vidhya/word-embeddings-in-nlp-word2vec-glove-fasttext-28d91c3741f1}{Aravind CR’s Article}
+    \item \href{https://www.youtube.com/watch?v=rmVRLe5D7YI}{CS20N Lecture}
+\end{itemize}
+\textbf{Output}: Similarity: 0.7839. \\
+\textbf{Test Question}: Why high similarity for ``king'' and ``queen''? \\
+\textbf{Your Answer}: They occur frequently together (clarified: share similar contexts). \\
+\textbf{Correction}: Similarity stems from similar contexts (e.g., royalty), not just co-occurrence. \\
+\textbf{Improvement}: Reinforced GloVe’s context-based vectors. \\
+\textbf{Status}: Complete.
+
+% Day 3
+\subsection*{Day 3: Wednesday, May 28, 2025, 7:00--8:00 PM IST}
+\textbf{Task}: Neural Networks for NLP \\
+\textbf{Intro}: Studied RNNs/LSTMs and their limitations vs. transformers. \\
+\textbf{Steps}:
+\begin{itemize}
+    \item Read ``RNNs and LSTMs'' by Christopher Olah (30 mins).
+    \item Watched 3Blue1Brown’s ``Gradient Descent'' (20 mins).
+    \item Explained transformer advantages (10 mins).
+\end{itemize}
+\textbf{Knowledge Highlights}: RNNs process sequentially; LSTMs mitigate vanishing gradients. Transformers use parallel attention. \\
+\textbf{References}: 
+\begin{itemize}
+    \item \href{https://colah.github.io/posts/2015-08-Understanding-LSTMs}{Olah’s Article}
+    \item \href{https://www.assemblyai.com/blog/transformers-vs-rnns}{AssemblyAI Blog}
+\end{itemize}
+\textbf{Output}: Transformers are faster (parallel) and handle longer contexts. \\
+\textbf{Test Question}: Why do transformers outperform RNNs? \\
+\textbf{Your Answer}: Transformers process in parallel and hold longer context. \\
+\textbf{Correction}: Added: Attention overcomes vanishing gradients. \\
+\textbf{Improvement}: Supplemented with transformer-RNN contrast resource. \\
+\textbf{Status}: Complete.
+
+% Day 4
+\subsection*{Day 4: Thursday, May 29, 2025, 7:00--8:00 PM IST}
+\textbf{Task}: Intro to Transformers \\
+\textbf{Intro}: Explored transformer architecture and BERT tokenization. \\
+\textbf{Steps}:
+\begin{itemize}
+    \item Read ``The Illustrated Transformer'' by Jay Alammar (40 mins).
+    \item Tokenized ``Transformers power modern LLMs'' with BERT (20 mins).
+\end{itemize}
+\textbf{Knowledge Highlights}: Self-attention weights token relationships. BERT uses WordPiece tokenization. \\
+\textbf{References}: 
+\begin{itemize}
+    \item \href{https://jalammar.github.io/illustrated-transformer}{The Illustrated Transformer}
+\end{itemize}
+\textbf{Output}: Token IDs: \texttt{[101, 19081, 2373, 2715, 2222, 5244, 102]}. Decoded: \texttt{[CLS] transformers power modern llms [SEP]}. \\
+\textbf{Test Question}: How does BERT’s tokenization support attention? \\
+\textbf{Your Answer}: Tokenization divides sentences; BERT’s tokens define context boundaries for attention. \\
+\textbf{Correction}: Tokens convert to IDs; [CLS]/[SEP] enable attention to process relationships. \\
+\textbf{Improvement}: Clarified numerical input role. \\
+\textbf{Status}: Complete.
+
+% Day 5
+\subsection*{Day 5: Friday, May 30, 2025, 7:00--8:00 PM IST}
+\textbf{Task}: Hands-On with Pre-trained Models \\
+\textbf{Intro}: Applied transformers for sentiment analysis. \\
+\textbf{Steps}:
+\begin{itemize}
+    \item Followed Hugging Face’s ``Getting Started with Transformers'' (30 mins).
+    \item Classified sentiment of ``I love AI'' with BERT in Colab (30 mins).
+\end{itemize}
+\textbf{Knowledge Highlights}: BERT’s pipeline simplifies NLP tasks. High scores reflect model confidence. \\
+\textbf{References}: 
+\begin{itemize}
+    \item \href{https://huggingface.co/docs/transformers/quicktour}{Hugging Face Quicktour}
+\end{itemize}
+\textbf{Output}: Sentiment: POSITIVE, Score: 0.99983. \\
+\textbf{Test Question}: Share sentiment score. \\
+\textbf{Your Answer}: Correct score provided. \\
+\textbf{Correction}: None needed. \\
+\textbf{Improvement}: Reinforced pipeline usage. \\
+\textbf{Status}: Complete.
+
+% Day 6
+\subsection*{Day 6: Saturday, May 31, 2025, 7:00--9:00 PM IST}
+\textbf{Task}: Mini-Project - Text Classifier \\
+\textbf{Intro}: Fine-tuned BERT for IMDB sentiment classification. \\
+\textbf{Steps}:
+\begin{itemize}
+    \item Followed Hugging Face’s ``Fine-Tuning'' tutorial (1 hour).
+    \item Fine-tuned DistilBERT on IMDB dataset (1 hour).
+\end{itemize}
+\textbf{Knowledge Highlights}: Fine-tuning adapts pre-trained models. Accuracy reflects task fit. \\
+\textbf{References}: 
+\begin{itemize}
+    \item \href{https://huggingface.co/docs/transformers/training}{Hugging Face Fine-Tuning}
+\end{itemize}
+\textbf{Output}: Accuracy: 92.4\% (epoch 3). \\
+\textbf{Test Question}: Share accuracy. \\
+\textbf{Your Answer}: 92.4\% with detailed metrics. \\
+\textbf{Correction}: None needed. \\
+\textbf{Improvement}: Noted validation loss increase for Day 7 tweaks. \\
+\textbf{Status}: Complete.
+
+% Day 7
+\subsection*{Day 7: Sunday, June 1, 2025 (Extended to June 2), 7:00--9:00 PM IST}
+\textbf{Task}: Review and Reflect \\
+\textbf{Intro}: Consolidated Week 1, improved classifier, summarized learnings. \\
+\textbf{Steps}:
+\begin{itemize}
+    \item Revisited ``The Illustrated Transformer'' (20 mins).
+    \item Improved Day 6 classifier (1 hour).
+    \item Wrote 100-word summary (20 mins).
+    \item Answered 5-question quiz (20 mins).
+\end{itemize}
+\textbf{Knowledge Highlights}: Attention, fine-tuning, and NLP progression. \\
+\textbf{References}: Same as Day 4. \\
+\textbf{Output}: Accuracy: 87.7\%. Summary: Covered all days. Quiz: 92\% score. \\
+\textbf{Quiz Answers and Corrections}:
+\begin{enumerate}
+    \item \textbf{Q}: What is tokenization? \textbf{A}: Splits text into chunks for numerical vectors. \textbf{C}: Correct; tokens map to IDs. \textbf{Score}: 5/5.
+    \item \textbf{Q}: How do embeddings capture meaning? \textbf{A}: Skip-gram/SGNS use surrounding words’ context. \textbf{C}: Correct. \textbf{Score}: 5/5.
+    \item \textbf{Q}: Why transformers over RNNs? \textbf{A}: Transformers use attention for long contexts. \textbf{C}: Add parallel processing. \textbf{Score}: 4.5/5.
+    \item \textbf{Q}: What does attention do? \textbf{A}: Self-attention attends to inputs; FFNs parallelize. \textbf{C}: Correct; weights relationships. \textbf{Score}: 5/5.
+    \item \textbf{Q}: How does BERT process text? \textbf{A}: Embeds, uses transformers, predicts via [CLS]. \textbf{C}: Encoder-only, no decoder. \textbf{Score}: 3.5/5.
+\end{enumerate}
+\textbf{Improvement}: Adjusted learning rate, early stopping; accuracy dropped due to underfitting. \\
+\textbf{Status}: Complete.
+
+% Ending the document
+\end{document}

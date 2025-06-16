@@ -1,0 +1,67 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//xAI//Grok 3//EN
+BEGIN:VEVENT
+UID:week3-day1-20250609
+DTSTAMP:20250607T173500Z
+DTSTART:20250609T190000+0530
+DTEND:20250609T200000+0530
+SUMMARY:Week 3 Day 1: Ethics in LLMs – Bias Detection
+DESCRIPTION:Read Google’s AI ethics paper (20 mins, https://arxiv.org/abs/2005.14165), analyze Week 3 Day 2 chatbot’s biased response for “Can you tell me a joke?” (40 mins). Share findings: Identify bias, source, and mitigation strategy with Grok. Notes: Focus on dataset bias (DailyDialog), consider filtering offensive content. Prep: Bookmark paper, revisit response.
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week3-day2-20250610
+DTSTAMP:20250607T173500Z
+DTSTART:20250610T190000+0530
+DTEND:20250610T200000+0530
+SUMMARY:Week 3 Day 2: Conversational Chatbot Mini-Project
+DESCRIPTION:Completed ahead of schedule (June 7). Fine-tuned DialoGPT on DailyDialog, deployed as FastAPI endpoint, tested 5 exchanges. Results: Mostly coherent, bias issue in Exchange 3 (“Chinese people... very rude”), mapped dialog data. Notes: Bias issue ties into Day 1’s ethics task; no further action needed. Prep: None.
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week3-day3-20250611
+DTSTAMP:20250607T173500Z
+DTSTART:20250611T190000+0530
+DTEND:20250611T200000+0530
+SUMMARY:Week 3 Day 3: Text Classification Mini-Project
+DESCRIPTION:Fine-tune BERT on IMDB subset (2000 train, 500 val) (40 mins), deploy as FastAPI endpoint (20 mins). Test on 5 samples: “This movie was amazing!”, “I hated this film.”, “A fantastic story with great acting.”, “Terrible plot and boring.”, “Really enjoyed the action scenes.” Share accuracy and API responses with Grok. Notes: Reuse Week 2 Day 3 fine-tuning script, adjust for BERT. Aim for >85% accuracy. Prep: Install transformers, datasets, fastapi, uvicorn.
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week3-day4-20250612
+DTSTAMP:20250607T173500Z
+DTSTART:20250612T190000+0530
+DTEND:20250612T200000+0530
+SUMMARY:Week 3 Day 4: Advanced Fine-Tuning – Domain Adaptation
+DESCRIPTION:Read domain adaptation guide (20 mins, https://huggingface.co/docs/transformers/training#domain-adaptation), adapt Week 2 Day 3 DistilBERT to a new domain (e.g., Twitter sentiment, 40 mins). Share accuracy on new domain with Grok. Notes: Use tweet_eval dataset (sentiment subset); expect accuracy drop due to domain shift, aim for >75%. Prep: Install datasets (pip install datasets), find tweet_eval dataset (https://huggingface.co/datasets/tweet_eval).
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week3-day5-20250613
+DTSTAMP:20250607T173500Z
+DTSTART:20250613T190000+0530
+DTEND:20250613T200000+0530
+SUMMARY:Week 3 Day 5: Model Interpretability
+DESCRIPTION:Read SHAP for NLP (20 mins, https://shap.readthedocs.io/en/latest/example_notebooks/text_examples/sentiment_analysis.html), apply SHAP to Week 2 Day 3 DistilBERT for “I love AI” (40 mins). Share interpretation (e.g., word contributions to sentiment) with Grok. Notes: Focus on how “love” contributes to POSITIVE label; expect “love” to have high positive impact. Prep: Install shap (pip install shap).
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week3-day6-20250614
+DTSTAMP:20250607T173500Z
+DTSTART:20250614T190000+0530
+DTEND:20250614T210000+0530
+SUMMARY:Week 3 Day 6: Capstone Project – Part 1
+DESCRIPTION:Start capstone: Build a multi-task LLM system (2 hours). Fine-tune RoBERTa for classification (IMDb, 1 hour), fine-tune GPT-2 for generation (TinyStories, 1 hour). Share classification accuracy and 3 generated prompts with Grok. Notes: Reuse Week 2 Day 1 tokenization insights for RoBERTa, Week 2 Day 6 GPT-2 script. Aim for >85% accuracy on IMDb. Prep: Install transformers, datasets.
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week3-day7-20250615
+DTSTAMP:20250607T173500Z
+DTSTART:20250615T190000+0530
+DTEND:20250615T210000+0530
+SUMMARY:Week 3 Day 7: Capstone Project – Part 2
+DESCRIPTION:Complete capstone (2 hours). Deploy RoBERTa and GPT-2 as a unified FastAPI endpoint (1 hour), test combined system (classification + generation) on 5 inputs (1 hour). Share API responses with Grok. Notes: Inputs should test both tasks (e.g., “This movie is great!” for classification, “Once upon a time…” for generation). Reuse Week 2 Day 5 FastAPI script. Prep: Install fastapi, uvicorn.
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+END:VCALENDAR

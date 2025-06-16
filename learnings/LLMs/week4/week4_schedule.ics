@@ -1,0 +1,67 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//xAI//Grok 3//EN
+BEGIN:VEVENT
+UID:week4-day1-20250616
+DTSTAMP:20250607T173500Z
+DTSTART:20250616T190000+0530
+DTEND:20250616T200000+0530
+SUMMARY:Week 4 Day 1: Multimodal Learning – Text and Image
+DESCRIPTION:Read CLIP paper (20 mins, https://arxiv.org/abs/2103.00020), fine-tune CLIP on a small text-image dataset (40 mins). Share classification accuracy on 5 text-image pairs with Grok. Notes: Use a dataset like COCO captions (https://huggingface.co/datasets/coco); expect accuracy >70%. Focus on text-image alignment (e.g., “A dog on the beach” with matching image). Prep: Install transformers, datasets, torch, torchvision.
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week4-day2-20250617
+DTSTAMP:20250607T173500Z
+DTSTART:20250617T190000+0530
+DTEND:20250617T200000+0530
+SUMMARY:Week 4 Day 2: Evaluation Metrics for LLMs
+DESCRIPTION:Read BLEU/ROUGE paper (20 mins, https://aclanthology.org/P02-1040/), evaluate Week 2 Day 6 GPT-2 stories using BLEU and ROUGE (40 mins). Share scores for 3 generated stories with Grok. Notes: Use reference texts from TinyStories test set; expect BLEU ~0.2–0.3, ROUGE-L ~0.4–0.5. Prep: Install nltk, rouge-score (pip install nltk rouge-score).
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week4-day3-20250618
+DTSTAMP:20250607T173500Z
+DTSTART:20250618T190000+0530
+DTEND:20250618T200000+0530
+SUMMARY:Week 4 Day 3: Deployment at Scale
+DESCRIPTION:Read Kubernetes for ML guide (20 mins, https://kubernetes.io/docs/tutorials/hello-minikube/), deploy Week 3 Day 7 capstone FastAPI endpoint on a local Kubernetes cluster (40 mins). Share deployment status and test response for 1 input with Grok. Notes: Use Minikube for local setup; expect successful deployment with response time <1s. Prep: Install Minikube, kubectl, Docker.
+LOCATION:Online/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week4-day4-20250619
+DTSTAMP:20250607T173500Z
+DTSTART:20250619T190000+0530
+DTEND:20250619T200000+0530
+SUMMARY:Week 4 Day 4: Advanced Optimization – Pruning
+DESCRIPTION:Read pruning guide (20 mins, https://pytorch.org/tutorials/intermediate/pruning_tutorial.html), apply pruning to Week 2 Day 3 DistilBERT (40 mins). Share new model size and accuracy on SST-2 with Grok. Notes: Use magnitude-based pruning; expect ~30% size reduction, <5% accuracy drop. Prep: Install torch (if not already installed).
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week4-day5-20250620
+DTSTAMP:20250607T173500Z
+DTSTART:20250620T190000+0530
+DTEND:20250620T200000+0530
+SUMMARY:Week 4 Day 5: LLM Security – Adversarial Attacks
+DESCRIPTION:Read adversarial attack paper (20 mins, https://arxiv.org/abs/2003.08271), test Week 2 Day 3 DistilBERT with adversarial examples (40 mins). Share model’s response to 3 perturbed inputs with Grok. Notes: Perturb “I love AI” (e.g., “I l0ve AI”, “I love A1”); expect misclassification on 1–2 inputs. Prep: Install textattack (pip install textattack).
+LOCATION:Online/Colab/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week4-day6-20250621
+DTSTAMP:20250607T173500Z
+DTSTART:20250621T190000+0530
+DTEND:20250621T210000+0530
+SUMMARY:Week 4 Day 6: Portfolio Project – Part 1
+DESCRIPTION:Start portfolio project: Build an interactive NLP web app (2 hours). Design frontend with React (1 hour), integrate Week 3 Day 7 FastAPI backend (1 hour). Share app URL or screenshot with Grok. Notes: Use Tailwind CSS for styling; host locally or on GitHub Pages. Prep: Install React (via CDN), reuse Week 3 Day 7 backend.
+LOCATION:Online/M3 Pro
+END:VEVENT
+BEGIN:VEVENT
+UID:week4-day7-20250622
+DTSTAMP:20250607T173500Z
+DTSTART:20250622T190000+0530
+DTEND:20250622T210000+0530
+SUMMARY:Week 4 Day 7: Portfolio Project – Part 2
+DESCRIPTION:Complete portfolio project (2 hours). Add features (e.g., history of predictions, generation styles) (1 hour), write a 200-word project summary (1 hour). Share final app URL and summary with Grok. Notes: Ensure app is polished for portfolio; summary should cover features, challenges, learnings. Prep: Test app thoroughly.
+LOCATION:Online/M3 Pro
+END:VEVENT
+END:VCALENDAR
